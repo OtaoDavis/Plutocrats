@@ -1,0 +1,83 @@
+body {
+    background-color: #f2f2f2;
+}
+
+.section-box {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.summary-card {
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 20px;
+}
+
+.summary-card img {
+    max-height: 200px;
+    object-fit: cover;
+}
+
+.price-details p {
+    margin-bottom: 10px;
+}
+
+.price-details hr {
+    margin: 10px 0;
+}
+/* Social Icons */
+.auth-box .btn-outline-secondary {
+    background-color: #b48f20;
+    color: white;
+    border: none;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.auth-box .btn-outline-secondary:hover {
+    background-color: #1A374D;
+    color: white;
+}
+
+/* Common box shadow and hover effect for all boxes */
+.section-box, .summary-card, .auth-box {
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25), 0 0 10px rgba(180, 143, 32, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section-box:hover, .summary-card:hover, .auth-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3), 0 0 15px rgba(180, 143, 32, 0.6);
+}
+
+
+/* Continue Button */
+.auth-box .btn-primary {
+    background-color: #b48f20;
+    border-color: #b48f20;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.auth-box .btn-primary:hover {
+    background-color: #1A374D;
+    border-color: #1A374D;
+}
+
+.priv_policy{
+    font-size: small;
+    color: #1A374D;
+}

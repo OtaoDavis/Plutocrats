@@ -1,16 +1,13 @@
-<!-- /*
-* Template Name: Tour
-* Template Author: Untree.co
-* Tempalte URI: https://untree.co/
-* License: https://creativecommons.org/licenses/by/3.0/
-*/ -->
 <!doctype html>
 <html lang="en">
 
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<meta name="author" content="Untree.co">
+	<meta name="author" content="BDC Technologies">
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="Expires" content="0">
 	<link rel="shortcut icon" href="favicon.png">
 
 	<meta name="description" content="" />
@@ -33,13 +30,14 @@
 	<link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
 	<link rel="stylesheet" href="css/daterangepicker.css">
 	<link rel="stylesheet" href="css/aos.css">
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="{{ asset('css/style.css') }}">
+	<link rel="icon" href="{{ asset('img/ico_logo.webp') }}?v={{ time() }}">
 
 	<title>Tours and Travel</title>
 </head>
 
 <body>
-
+	@include('layouts.navbar')
 
 	<div class="site-mobile-menu site-navbar-target">
 		<div class="site-mobile-menu-header">
@@ -49,45 +47,6 @@
 		</div>
 		<div class="site-mobile-menu-body"></div>
 	</div>
-
-	<nav class="site-nav">
-		<div class="container">
-			<div class="site-navigation">
-				<img src="images/PLUTOCRATS SVG- HEAD ONLY-01.svg" alt="">
-				<!-- <a href="index.html" class="logo m-0">Tours & Travel <span class="text-primary">.</span></a> -->
-
-				<ul class="js-clone-nav d-none d-lg-inline-block text-left site-menu float-right">
-					<li class="active"><a href="index.html">Home</a></li>
-					<li class="has-children">
-						<a href="#">Destinations</a>
-						<ul class="dropdown">
-							<li><a href="elements.html">Maasai Mara</a></li>
-							<li><a href="#">Hell's Gate</a></li>
-							<li class="has-children">
-								<a href="#">Tsavo</a>
-								<ul class="dropdown">
-									<li><a href="#">Tsavo East</a></li>
-									<li><a href="#">Tsavo West</a></li>
-								</ul>
-							</li>
-							<li><a href="#">Amboseli</a></li>
-						</ul>
-					</li>
-					<li><a href="services.html">Services</a></li>
-					<li><a href="about.html">About</a></li>
-					<li><a href="contact.html">Contact Us</a></li>
-				</ul>
-
-				<a href="#"
-					class="burger ml-auto float-right site-menu-toggle js-menu-toggle d-inline-block d-lg-none light"
-					data-toggle="collapse" data-target="#main-navbar">
-					<span></span>
-				</a>
-
-			</div>
-		</div>
-	</nav>
-
 
 	<div class="hero">
 		<div class="container">
@@ -122,7 +81,7 @@
 									</div>
 									<div class="row align-items-center">
 										<div class="col-sm-12 col-md-6 mb-3 mb-lg-0 col-lg-4">
-											<input type="submit" class="btn btn-primary btn-block" value="Search">
+											<input type="submit" class="btn btn-primary btn-block" value="Get Quote">
 										</div>
 										<div class="col-lg-8">
 											<label class="control control--checkbox mt-3">
@@ -154,77 +113,127 @@
 		<div class="container">
 			<div class="row text-center justify-content-center mb-5">
 				<div class="col-lg-7">
-					<h2 class="section-title text-center">Popular Destination</h2>
+					<h2 class="section-title text-center">Top Destinations</h2>
 				</div>
 			</div>
 
-			<div class="owl-carousel owl-3-slider">
-
-				<div class="item">
-					<a class="media-thumb" href="images/hero-slider-1.png" data-fancybox="gallery">
-						<div class="media-text">
-							<h3>Maasai Mara</h3>
-							<span class="location">Kenya</span>
-						</div>
-						<img src="images/hero-slider-1.png" alt="Image" class="img-fluid">
-					</a>
+			<div class="row">
+				<!-- Location 1 -->
+				<div class="col-md-4 mb-4">
+					<div class="destination-item">
+						<a class="media-thumb" href="{{route('mara')}}">
+							<img src="images/cheetah.webp" alt="Maasai Mara" class="img-fluid">
+							<div class="media-text">
+								<h3>Maasai Mara</h3>
+								<span class="location">Kenya</span>
+								<p>A breathtaking wildlife reserve known for the Great Migration and
+									diverse animal species.</p>
+								<span class="explore-text">
+									Explore
+								</span>
+							</div>
+						</a>
+					</div>
 				</div>
 
-				<div class="item">
-					<a class="media-thumb" href="images/hero-slider-2.jpg" data-fancybox="gallery">
-						<div class="media-text">
-							<h3>Tsavo West</h3>
-							<span class="location">Kenya</span>
-						</div>
-						<img src="images/hero-slider-2.jpg" alt="Image" class="img-fluid">
-					</a>
+				<!-- Location 2 -->
+				<div class="col-md-4 mb-4">
+					<div class="destination-item">
+						<a class="media-thumb" href="images/elephants.webp" data-fancybox="gallery">
+							<img src="images/elephants.webp" alt="Tsavo West" class="img-fluid">
+							<div class="media-text">
+								<h3>Tsavo </h3>
+								<span class="location">Kenya</span>
+								<p>Kenya’s largest park, Tsavo, is famed for its red elephants, stunning landscapes, and
+									rich wildlife.</p>
+								<span class="explore-text">
+									Explore
+								</span>
+
+							</div>
+						</a>
+					</div>
 				</div>
 
-				<div class="item">
-					<a class="media-thumb" href="images/hero-slider-3.jpg" data-fancybox="gallery">
-						<div class="media-text">
-							<h3>Amboseli</h3>
-							<span class="location">Kenya</span>
-						</div>
-						<img src="images/hero-slider-3.jpg" alt="Image" class="img-fluid">
-					</a>
+				<!-- Location 3 -->
+				<div class="col-md-4 mb-4">
+					<div class="destination-item">
+						<a class="media-thumb" href="images/amboseli.webp" data-fancybox="gallery">
+							<img src="images/hero-slider-3.jpg" alt="Amboseli" class="img-fluid">
+							<div class="media-text">
+								<h3>Amboseli</h3>
+								<span class="location">Kenya</span>
+								<p>Amboseli offers stunning Kilimanjaro views, large elephant herds, and diverse
+									wildlife.</p>
+								<span class="explore-text">
+									Explore
+								</span>
+							</div>
+						</a>
+					</div>
 				</div>
 
-
-				<div class="item">
-					<a class="media-thumb" href="images/hero-slider-4.jpg" data-fancybox="gallery">
-						<div class="media-text">
-							<h3>Tsavo East</h3>
-							<span class="location">Kenya</span>
-						</div>
-						<img src="images/hero-slider-4.jpg" alt="Image" class="img-fluid">
-					</a>
+				<!-- Location 4 -->
+				<div class="col-md-4 mb-4">
+					<div class="destination-item">
+						<a class="media-thumb" href="{{(route('tsavo'))}}">
+							<img src="images/kicheche.webp" alt="Tsavo East" class="img-fluid">
+							<div class="media-text">
+								<h3>Ol Pejeta</h3>
+								<span class="location">Kenya</span>
+								<p>A renowned conservancy home to the last two northern white rhinos and diverse
+									wildlife.</p>
+								<span class="explore-text">
+									Explore
+								</span>
+							</div>
+						</a>
+					</div>
 				</div>
 
-				<div class="item">
-					<a class="media-thumb" href="images/hero-slider-5.png" data-fancybox="gallery">
-						<div class="media-text">
-							<h3>Chyulu Hills</h3>
-							<span class="location">Kenya</span>
-						</div>
-						<img src="images/hero-slider-5.png" alt="Image" class="img-fluid">
-					</a>
+				<!-- Location 5 -->
+				<div class="col-md-4 mb-4">
+					<div class="destination-item">
+						<a class="media-thumb" href="#">
+							<img src="images/hero-slider-5.png" alt="Chyulu Hills" class="img-fluid">
+							<div class="media-text">
+								<h3>Chyulu Hills</h3>
+								<span class="location">Kenya</span>
+								<p>A volcanic mountain range with lush green hills, caves, and stunning wildlife.</p>
+								<span class="explore-text">
+									Explore
+								</span>
+							</div>
+						</a>
+					</div>
 				</div>
 
-				<!-- <div class="item">
-					<a class="media-thumb" href="images/hero-slider-1.jpg" data-fancybox="gallery">
-						<div class="media-text">
-							<h3>Lake Thun</h3>
-							<span class="location">Switzerland</span>
-						</div>
-						<img src="images/hero-slider-2.jpg" alt="Image" class="img-fluid">
-					</a>
-				</div> -->
-
+				<!-- Location 6 -->
+				<div class="col-md-4 mb-4">
+					<div class="destination-item">
+						<a class="media-thumb" href="#">
+							<img src="images/samburu.webp" alt="Samburu" class="img-fluid">
+							<div class="media-text">
+								<h3>Samburu</h3>
+								<span class="location">Kenya</span>
+								<p>A rugged wilderness known for rare wildlife like Grevy’s zebra and reticulated
+									giraffe.</p>
+								<span class="explore-text">
+									Explore
+								</span>
+							</div>
+						</a>
+					</div>
+				</div>
 			</div>
 
+			<!-- "All Destinations" Button
+			<div class="text-center mt-2">
+				<a href="all-destinations.html" class="btn btn-primary btn-lg">View Destinations</a>
+			</div> -->
 		</div>
 	</div>
+
 
 
 
@@ -267,102 +276,50 @@
 		</div>
 	</div> -->
 
-	<div class="untree_co-section">
-		<div class="container">
-			<div class="row justify-content-center text-center mb-5">
-				<div class="col-lg-6">
-					<h2 class="section-title text-center mb-3">Packages</h2>
-					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there
-						live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics,
-						a large language ocean.</p>
+	<div class="package-section">
+		<h2 class="section-title">Common Packages</h2>
+		<div class="packages-container">
+			<!-- Package 1 -->
+			<div class="package-card" style="background-image: url('{{ asset('images/game_drive.webp') }}');">
+				<div class="package-details">
+					<h3>5-Day Kenya Game Drive</h3>
+					<p>Explore Kenya’s famous Maasai Mara and Amboseli National Park in an exciting 5-day safari.</p>
+					<span class="price">From Kshs /= </span>
 				</div>
 			</div>
-			<div class="row">
-				<div class="col-6 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
-					<div class="media-1">
-						<a href="#" class="d-block mb-3"><img src="images/hero-slider-1.png" alt="Image"
-								class="img-fluid"></a>
-						<span class="d-flex align-items-center loc mb-2">
-							<span class="icon-room mr-3"></span>
-							<span>Kenya</span>
-						</span>
-						<div class="d-flex align-items-center">
-							<div>
-								<h3><a href="#">Maasai Mara</a></h3>
-								<div class="price ml-auto">
-									<span>kshs /=</span>
-								</div>
-							</div>
 
-						</div>
-
-					</div>
+			<!-- Package 2 -->
+			<div class="package-card" style="background-image: url('{{ asset('images/charter2.webp') }}');">
+				<div class="package-details">
+					<h3>Private Charter</h3>
+					<p>Experience ultimate luxury with a private chartered tour of the savannah grasslands and
+						rainforests.</p>
+					<span class="price">From Kshs /=</span>
 				</div>
-				<div class="col-6 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
-					<div class="media-1">
-						<a href="#" class="d-block mb-3"><img src="images/hero-slider-2.jpg" alt="Image"
-								class="img-fluid"></a>
-						<span class="d-flex align-items-center loc mb-2">
-							<span class="icon-room mr-3"></span>
-							<span>Kenya</span>
-						</span>
-						<div class="d-flex align-items-center">
-							<div>
-								<h3><a href="#">Tsavo East</a></h3>
-								<div class="price ml-auto">
-									<span>Kshs /=</span>
-								</div>
-							</div>
+			</div>
 
-						</div>
-
-					</div>
+			<!-- Package 3 -->
+			<div class="package-card" style="background-image: url('{{ asset('images/hiking.webp') }}');">
+				<div class="package-details">
+					<h3>7-Day Hiking Safari</h3>
+					<p>Embark on a 7-day adventure exploring Mount Kenya, Aberdare Ranges, and Hell’s Gate.</p>
+					<span class="price">From Kshs /=</span>
 				</div>
-				<div class="col-6 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
-					<div class="media-1">
-						<a href="#" class="d-block mb-3"><img src="images/hero-slider-3.jpg" alt="Image"
-								class="img-fluid"></a>
-						<span class="d-flex align-items-center loc mb-2">
-							<span class="icon-room mr-3"></span>
-							<span>Kenya</span>
-						</span>
-						<div class="d-flex align-items-center">
-							<div>
-								<h3><a href="#">Amboseli</a></h3>
-								<div class="price ml-auto">
-									<span>Kshs /=</span>
-								</div>
-							</div>
+			</div>
 
-						</div>
-
-					</div>
-				</div>
-				<div class="col-6 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
-					<div class="media-1">
-						<a href="#" class="d-block mb-3"><img src="images/hero-slider-4.jpg" alt="Image"
-								class="img-fluid"></a>
-
-						<span class="d-flex align-items-center loc mb-2">
-							<span class="icon-room mr-3"></span>
-							<span>Tanzania</span>
-						</span>
-
-						<div class="d-flex align-items-center">
-							<div>
-								<h3><a href="#">Serengeti</a></h3>
-								<div class="price ml-auto">
-									<span>Kshs /=</span>
-								</div>
-							</div>
-
-						</div>
-
-					</div>
+			<!-- Package 4 -->
+			<div class="package-card" style="background-image: url('{{ asset('images/kicheche.webp') }}');">
+				<div class="package-details">
+					<h3>Luxury Safari Weekend</h3>
+					<p>Indulge in a luxury getaway at a 5-star safari lodge with game drives and spa treatments.</p>
+					<span class="price">From Kshs /= </span>
 				</div>
 			</div>
 		</div>
 	</div>
+
+
+
 
 
 	<div class="untree_co-section testimonial-section mt-5">
@@ -370,7 +327,7 @@
 			<div class="row justify-content-center">
 				<div class="col-lg-7 text-center">
 					<h2 class="section-title text-center mb-5">Testimonials</h2>
-
+	
 					<div class="owl-single owl-carousel no-nav">
 						<div class="testimonial mx-auto">
 							<figure class="img-wrap">
@@ -378,39 +335,35 @@
 							</figure>
 							<h3 class="name">Adam Aderson</h3>
 							<blockquote>
-								<p>&ldquo;There live the blind texts. Separated they live in Bookmarksgrove right at the
-									coast of the Semantics, a large language ocean.&rdquo;</p>
+								<p>&ldquo;There live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.&rdquo;</p>
 							</blockquote>
 						</div>
-
+	
 						<div class="testimonial mx-auto">
 							<figure class="img-wrap">
 								<img src="images/person_3.jpg" alt="Image" class="img-fluid">
 							</figure>
 							<h3 class="name">Lukas Devlin</h3>
 							<blockquote>
-								<p>&ldquo;There live the blind texts. Separated they live in Bookmarksgrove right at the
-									coast of the Semantics, a large language ocean.&rdquo;</p>
+								<p>&ldquo;There live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.&rdquo;</p>
 							</blockquote>
 						</div>
-
+	
 						<div class="testimonial mx-auto">
 							<figure class="img-wrap">
 								<img src="images/person_4.jpg" alt="Image" class="img-fluid">
 							</figure>
 							<h3 class="name">Kayla Bryant</h3>
 							<blockquote>
-								<p>&ldquo;There live the blind texts. Separated they live in Bookmarksgrove right at the
-									coast of the Semantics, a large language ocean.&rdquo;</p>
+								<p>&ldquo;There live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.&rdquo;</p>
 							</blockquote>
 						</div>
-
 					</div>
-
 				</div>
 			</div>
 		</div>
 	</div>
+	
 
 
 	<!-- <div class="py-5 cta-section">
@@ -427,78 +380,6 @@
 		</div>
 	</div> -->
 
-	<div class="site-footer">
-		<div class="inner first">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-6 col-lg-4">
-						<div class="widget">
-							<h3 class="heading">About Tour</h3>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-								there live the blind texts.</p>
-						</div>
-						<div class="widget">
-							<ul class="list-unstyled social">
-								<li><a href="#"><span class="icon-twitter"></span></a></li>
-								<li><a href="#"><span class="icon-instagram"></span></a></li>
-								<li><a href="#"><span class="icon-facebook"></span></a></li>
-								<li><a href="#"><span class="icon-linkedin"></span></a></li>
-								<li><a href="#"><span class="icon-dribbble"></span></a></li>
-								<li><a href="#"><span class="icon-pinterest"></span></a></li>
-								<li><a href="#"><span class="icon-apple"></span></a></li>
-								<li><a href="#"><span class="icon-google"></span></a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-md-6 col-lg-2 pl-lg-5">
-						<div class="widget">
-							<h3 class="heading">Pages</h3>
-							<ul class="links list-unstyled">
-								<li><a href="#">Blog</a></li>
-								<li><a href="#">About</a></li>
-								<li><a href="#">Contact</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-md-6 col-lg-2">
-						<div class="widget">
-							<h3 class="heading">Resources</h3>
-							<ul class="links list-unstyled">
-								<li><a href="#">Blog</a></li>
-								<li><a href="#">About</a></li>
-								<li><a href="#">Contact</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-md-6 col-lg-4">
-						<div class="widget">
-							<h3 class="heading">Contact</h3>
-							<ul class="list-unstyled quick-info links">
-								<li class="email"><a href="#">mail@example.com</a></li>
-								<li class="phone"><a href="#">+254 123 456789</a></li>
-								<li class="address"><a href="#">address 0000000</a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-
-
-		<div class="inner dark">
-			<div class="container">
-				<div class="row text-center">
-					<div class="col-md-8 mb-3 mb-md-0 mx-auto">
-						<p>Copyright &copy;
-							<script>document.write(new Date().getFullYear());</script>. All Rights Reserved. &mdash;
-						</p>
-					</div>
-
-				</div>
-			</div>
-		</div>
-	</div>
 
 	<div id="overlayer"></div>
 	<div class="loader">
@@ -545,9 +426,16 @@
 
 			});
 		})
+
+		function togglePackageDetails(card) {
+			card.classList.toggle('open');
+		}
+
 	</script>
 
 	<script src="js/custom.js"></script>
+
+	@include('layouts.footer')
 
 </body>
 
