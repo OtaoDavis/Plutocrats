@@ -81,3 +81,17 @@ body {
     font-size: small;
     color: #1A374D;
 }
+
+.input-group-btn {
+    display: flex;
+}
+
+.input-group-btn button {
+    border: 1px solid #ddd;
+    width: 30px;
+    height: 30px;
+}
+
+.input-group-btn button:focus {
+    outline: none;
+}

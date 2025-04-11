@@ -1,0 +1,92 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card-body {
+    padding: 20px;
+}
+
+/* Main content container */
+.main-content {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Heading Styles */
+.card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #343a40;
+}
+
+/* Alert Styling */
+.alert {
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1rem;
+}
+
+/* Specific Styles for History Section */
+.history-item {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    color: #555;
+}
+
+.history-item:last-child {
+    border-bottom: none;
+}
+
+.history-section .card-body {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/* Typography Styles */
+h6 {
+    font-weight: bold;
+    color: #495057;
+}
+
+.card-text {
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+
+.card-text small {
+    color: #adb5bd;
+}
+
+/* Customizing the History List */
+.list-group-item {
+    padding: 12px;
+    border: none;
+}
+
+.list-group-item a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.list-group-item a:hover {
+    text-decoration: underline;
+}

@@ -2,6 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BookingController;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\UserDashController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,9 +22,29 @@ Route::get('/', function () {
     return view('index');
 })->name('home');
 
+Route::get('about', function () {
+    return view('about');
+})->name('about');
+
 Route::get('contact', function () {
     return view('contact');
 })->name('contact');
+
+Route::get('packages', function () {
+    return view('packages');
+})->name('packages');
+
+Route::get('login', [LoginController::class, 'showLoginForm'])->name('login');
+Route::post('login', [LoginController::class, 'login']);
+
+Route::post('/logout', function () {
+    Auth::logout();
+    return redirect()->route('login');
+})->name('logout');
+
+Route::get('/register', [RegisterController::class, 'showRegistrationForm'])->name('register');
+Route::post('/register', [RegisterController::class, 'register']);
+
 
 Route::get('/locations/mara', function () {
     return view('locations.mara');
@@ -30,9 +54,11 @@ Route::get('/locations/tsavo', function () {
     return view('locations.tsavo');
 })->name('tsavo');
 
-Route::get('about', function () {
-    return view('about');
-})->name('about');
+Route::get('/locations/amboseli', function () {
+    return view('locations.amboseli');
+})->name('amboseli');
 
 Route::get('/booking', [BookingController::class, 'show'])->name('booking.page');
+Route::get('/user_dash', [BookingController::class, 'index'])->name('user_dash');
+Route::post('/bookings', [BookingController::class, 'store'])->name('bookings.store');
 

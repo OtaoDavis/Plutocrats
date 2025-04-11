@@ -9,10 +9,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="{{ asset('css/book.css') }}">
 
-
-    <style>
-
-    </style>
 </head>
 
 <body>
@@ -23,41 +19,89 @@
             <div class="col-lg-7">
                 <h2 class="mb-4">Confirm and Pay</h2>
 
-                <!-- Dates Section -->
+                <!-- Dates Section -->                 
                 <div class="section-box">
                     <h5>Dates</h5>
-                    <p>Check-in: <strong></strong></p>
-                    <p>Check-out: <strong></strong></p>
+                    <div class="row">
+                        <div class="col-6 mb-3">
+                            <label for="check-in" class="form-label">Check-in</label>
+                            <input type="date" class="form-control" id="check-in" name="check-in" required>
+                        </div>
+                        <div class="col-6 mb-3">
+                            <label for="check-out" class="form-label">Check-out</label>
+                            <input type="date" class="form-control" id="check-out" name="check-out" required>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- Guests Section -->
+
+                <!-- Guests Section with separate inputs for Adults and Children side by side -->
                 <div class="section-box">
                     <h5>Guests</h5>
-                    <p>2 Adults, 1 Child</p>
+
+                    <div class="row">
+                        <!-- Adults Guest Count -->
+                        <div class="col-6 mb-3">
+                            <label for="adult-count" class="form-label">Adults</label>
+                            <div class="input-group" style="max-width: 200px;">
+                                <button class="btn btn-outline-secondary input-group-btn" type="button"
+                                    id="decrement-adults">-</button>
+                                <input type="number" class="form-control text-center" id="adult-count" value="2" min="1"
+                                    required>
+                                <button class="btn btn-outline-secondary input-group-btn" type="button"
+                                    id="increment-adults">+</button>
+                            </div>
+                        </div>
+
+                        <!-- Children Guest Count -->
+                        <div class="col-6 mb-3">
+                            <label for="child-count" class="form-label">Children</label>
+                            <div class="input-group" style="max-width: 200px;">
+                                <button class="btn btn-outline-secondary input-group-btn" type="button"
+                                    id="decrement-children">-</button>
+                                <input type="number" class="form-control text-center" id="child-count" value="1" min="0"
+                                    required>
+                                <button class="btn btn-outline-secondary input-group-btn" type="button"
+                                    id="increment-children">+</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
+                <!-- Authentication Section -->
                 <div class="auth-box rounded p-4 mb-5" style="max-width: 500px; margin: 0 auto;">
                     <h4 class="mb-3 text-center">Sign in or create account</h4>
 
-                    <form>
-                        {{-- Country Code + Phone Input --}}
+                    <form method="POST" action="/verify-phone">
+                        @csrf
+
+                        <!-- Email Input -->
                         <div class="mb-3">
-                            <label for="phone" class="form-label">Phone Number</label>
+                            <label for="email" class="form-label">Email Address</label>
+                            <input type="email" class="form-control" id="email" name="email"
+                                placeholder="Enter your email" required>
+                        </div>
+
+                        <!-- Phone Number with Country Code -->
+                        <div class="mb-3">
+                            <label for="country_code" class="form-label">Phone Number</label>
                             <div class="input-group">
-                                <select class="form-select" style="max-width: 120px;">
+                                <select class="form-select" name="country_code" id="country_code"
+                                    style="max-width: 120px;" required>
                                     <option value="+254">🇰🇪 +254</option>
                                     <option value="+1">🇺🇸 +1</option>
                                     <option value="+44">🇬🇧 +44</option>
                                     <option value="+91">🇮🇳 +91</option>
-                                    {{-- Add more countries as needed --}}
                                 </select>
-                                <input type="tel" class="form-control" id="phone" placeholder="Enter phone number">
+                                <input type="tel" class="form-control" name="phone" id="phone" placeholder="712345678"
+                                    required pattern="[0-9]{9}">
                             </div>
-                            <span class="priv_policy">We’ll call or text you to confirm your number. Standard message
-                                and data rates apply. Privacy Policy</span>
+                            <small class="form-text text-muted">
+                                We’ll call or text you to confirm your number. Standard rates apply.
+                            </small>
                         </div>
 
-                        {{-- Social Icons --}}
+                        <!-- Social Icons -->
                         <div class="d-flex justify-content-center gap-3 my-4">
                             <a href="#" class="btn btn-outline-secondary rounded-circle">
                                 <i class="fab fa-google"></i>
@@ -70,19 +114,14 @@
                             </a>
                         </div>
 
-
-                        {{-- Continue Button --}}
+                        <!-- Continue Button -->
                         <button type="submit" class="btn btn-primary w-100">Continue</button>
                     </form>
-                    <button class="btn btn-primary w-100 mt-4">Sign In With Email</button>
                 </div>
-
-
-
 
             </div>
 
-            <!-- Right side -->
+            <!-- Right side (Summary Card) -->
             <div class="col-lg-5">
                 <div class="summary-card">
                     <img src="{{ asset('images/' . $image) }}" alt="{{ $title }}" class="img-fluid rounded mb-3">
@@ -97,9 +136,45 @@
                     </div>
                 </div>
             </div>
+        </div>
 
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script>
+            // Guest count functionality for Adults
+            const incrementAdults = document.getElementById("increment-adults");
+            const decrementAdults = document.getElementById("decrement-adults");
+            const adultCountInput = document.getElementById("adult-count");
+
+            incrementAdults.addEventListener("click", function () {
+                let currentValue = parseInt(adultCountInput.value);
+                adultCountInput.value = currentValue + 1;
+            });
+
+            decrementAdults.addEventListener("click", function () {
+                let currentValue = parseInt(adultCountInput.value);
+                if (currentValue > 1) {
+                    adultCountInput.value = currentValue - 1;
+                }
+            });
+
+            // Guest count functionality for Children
+            const incrementChildren = document.getElementById("increment-children");
+            const decrementChildren = document.getElementById("decrement-children");
+            const childCountInput = document.getElementById("child-count");
+
+            incrementChildren.addEventListener("click", function () {
+                let currentValue = parseInt(childCountInput.value);
+                childCountInput.value = currentValue + 1;
+            });
+
+            decrementChildren.addEventListener("click", function () {
+                let currentValue = parseInt(childCountInput.value);
+                if (currentValue > 0) {
+                    childCountInput.value = currentValue - 1;
+                }
+            });
+        </script>
 
 </body>
 

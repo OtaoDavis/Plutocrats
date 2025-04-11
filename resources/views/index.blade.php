@@ -158,7 +158,7 @@
 				<!-- Location 3 -->
 				<div class="col-md-4 mb-4">
 					<div class="destination-item">
-						<a class="media-thumb" href="images/amboseli.webp" data-fancybox="gallery">
+						<a class="media-thumb" href="{{route('amboseli')}}">
 							<img src="images/hero-slider-3.jpg" alt="Amboseli" class="img-fluid">
 							<div class="media-text">
 								<h3>Amboseli</h3>
@@ -327,7 +327,7 @@
 			<div class="row justify-content-center">
 				<div class="col-lg-7 text-center">
 					<h2 class="section-title text-center mb-5">Testimonials</h2>
-	
+
 					<div class="owl-single owl-carousel no-nav">
 						<div class="testimonial mx-auto">
 							<figure class="img-wrap">
@@ -335,27 +335,30 @@
 							</figure>
 							<h3 class="name">Adam Aderson</h3>
 							<blockquote>
-								<p>&ldquo;There live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.&rdquo;</p>
+								<p>&ldquo;There live the blind texts. Separated they live in Bookmarksgrove right at the
+									coast of the Semantics, a large language ocean.&rdquo;</p>
 							</blockquote>
 						</div>
-	
+
 						<div class="testimonial mx-auto">
 							<figure class="img-wrap">
 								<img src="images/person_3.jpg" alt="Image" class="img-fluid">
 							</figure>
 							<h3 class="name">Lukas Devlin</h3>
 							<blockquote>
-								<p>&ldquo;There live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.&rdquo;</p>
+								<p>&ldquo;There live the blind texts. Separated they live in Bookmarksgrove right at the
+									coast of the Semantics, a large language ocean.&rdquo;</p>
 							</blockquote>
 						</div>
-	
+
 						<div class="testimonial mx-auto">
 							<figure class="img-wrap">
 								<img src="images/person_4.jpg" alt="Image" class="img-fluid">
 							</figure>
 							<h3 class="name">Kayla Bryant</h3>
 							<blockquote>
-								<p>&ldquo;There live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.&rdquo;</p>
+								<p>&ldquo;There live the blind texts. Separated they live in Bookmarksgrove right at the
+									coast of the Semantics, a large language ocean.&rdquo;</p>
 							</blockquote>
 						</div>
 					</div>
@@ -363,7 +366,7 @@
 			</div>
 		</div>
 	</div>
-	
+
 
 
 	<!-- <div class="py-5 cta-section">

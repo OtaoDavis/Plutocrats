@@ -1,0 +1,70 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.header{
+  background: #b48f20;
+  color: #ffff;
+}
+.packages-intro {
+    background: #f4f4f4;
+  }
+  
+  .safari-package h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+  
+  .safari-package ul {
+    padding-left: 1.5rem;
+    list-style-type: disc;
+  }
+  
+  .safari-package ul li {
+    margin-bottom: 5px;
+  }
+  
+  .custom-card {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .custom-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .explore-text {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    position: absolute;
+    left: 50%;
+    bottom: 15px;
+    transform: translateX(-50%);
+    padding-bottom: 5px;
+    text-align: center;
+  }
+  
+.explore-text::after {
+    content: "";
+    display: block;
+    height: 2px;
+    background: white;
+    margin: 5px auto 0 auto;
+    transition: background 0.3s ease;
+    width: 100%; 
+    max-width: 50px; 
+    position: absolute;
+    left: 0;
+    right: 0;
+  }
+  
+  /* Hover the card to change underline color */
+  .custom-card:hover .explore-text::after {
+    background: #b48f20;
+  }
+  
+   
+  
