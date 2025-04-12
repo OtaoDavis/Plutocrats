@@ -280,21 +280,20 @@
 		<h2 class="section-title">Common Packages</h2>
 		<div class="packages-container">
 			<!-- Package 1 -->
-			<div class="package-card" style="background-image: url('{{ asset('images/game_drive.webp') }}');">
+			<div class="package-card" style="background-image: url('{{ asset('images/mr-2.webp') }}');">
 				<div class="package-details">
-					<h3>5-Day Kenya Game Drive</h3>
-					<p>Explore Kenya’s famous Maasai Mara and Amboseli National Park in an exciting 5-day safari.</p>
-					<span class="price">From Kshs /= </span>
+					<h3>4 NIGHTS/5 DAYS SAFARIS – NAIROBI & MARA COMBINATION</h3>
+					<p>Explore Kenya’s famous Maasai Mara in an exciting 5-day safari.</p>
+					<span class="price">From Ksh 2,500 per person sharing*</span>
 				</div>
 			</div>
 
 			<!-- Package 2 -->
-			<div class="package-card" style="background-image: url('{{ asset('images/charter2.webp') }}');">
+			<div class="package-card" style="background-image: url('{{ asset('images/mz-2.webp') }}');">
 				<div class="package-details">
-					<h3>Private Charter</h3>
-					<p>Experience ultimate luxury with a private chartered tour of the savannah grasslands and
-						rainforests.</p>
-					<span class="price">From Kshs /=</span>
+					<h3>FINCH HATTONS & MAHALI MZURI - 7 NIGHTS FLYING SAFARI</h3>
+					<p>Experience a luxurious 7-night flying safari through Kenya’s most iconic landscapes.</p>
+					<span class="price">From Ksh 6,500 per person sharing*</span>
 				</div>
 			</div>
 
