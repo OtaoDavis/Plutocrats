@@ -17,6 +17,7 @@ class Booking extends Model
         'children',
         'status',
         'location',
+        'price',
     ];
 
     // Relationship with User

@@ -58,7 +58,13 @@ Route::get('/locations/amboseli', function () {
     return view('locations.amboseli');
 })->name('amboseli');
 
-Route::get('/booking', [BookingController::class, 'show'])->name('booking.page');
+Route::get('/booking', [BookingController::class, 'show'])->name('booking.show');
 Route::get('/user_dash', [BookingController::class, 'index'])->name('user_dash');
-Route::post('/bookings', [BookingController::class, 'store'])->name('bookings.store');
+Route::post('/booking/store', [BookingController::class, 'store'])->name('booking.store');
+Route::get('/bookings/{id}', [BookingController::class, 'show'])->name('booking.details');
+Route::post('/booking/submit', [BookingController::class, 'submit'])->name('booking.submit');
+Route::post('/book/confirm', [BookingController::class, 'confirm'])->name('booking.confirm');
+Route::post('/set-package-price', [BookingController::class, 'setPackagePrice']);
+
+
 

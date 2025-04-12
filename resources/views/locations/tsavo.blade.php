@@ -80,7 +80,7 @@
             <div class="overlay">
               <h3>{{ $package['title'] }}</h3>
               <p>{{ $package['desc'] }}</p>
-              <a href="{{ route('booking.page', ['title' => urlencode($package['title']), 'image' => $package['image']]) }}"
+              <a href="{{ route('booking.show', ['title' => urlencode($package['title']), 'image' => $package['image']]) }}"
                 class="book-btn">Book Now</a>
             </div>
           </div>
