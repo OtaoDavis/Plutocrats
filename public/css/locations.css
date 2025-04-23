@@ -98,6 +98,7 @@ body {
 
 .package-card:hover {
     transform: scale(1.05);
+
 }
 
 .package-card .overlay {
@@ -124,20 +125,36 @@ body {
     margin-bottom: 15px;
 }
 
-.book-btn {
+/* Explore Text Styling */
+.book-text {
+    font-size: 18px;
+    font-weight: bold;
     color: white;
     text-decoration: none;
-    padding: 10px 20px;
-    border: 2px #fff;
-    border-radius: 20px;
-    font-size: 1rem;
-    transition: background 0.3s;
-}
-
-.book-btn:hover {
-    background: #1A374D;
-    color: #fff;
-}
+    position: relative;
+    display: inline-block;
+    padding-bottom: 5px; 
+    margin-top: 10%;
+    cursor: pointer;
+  }
+  
+  /* Underline Effect */
+  .book-text::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: background 0.3s ease;
+  }
+  
+  /* Hover Effect */
+  .book-text:hover::after {
+    background: #b48f20;
+  }
 
 /* Scroll Buttons */
 .scroll-btn {
@@ -244,11 +261,10 @@ body {
 
 /* Scrollable Locations Grid */
 .locations-grid-wrapper {
-    width: 100%;
-    overflow-x: auto; 
-    position: relative;
-    padding: 10px;
-}
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 10px 0;
+  }
 
 .locations-grid {
     display: grid;
@@ -296,7 +312,7 @@ body {
 }
 
 /* Scroll Buttons */
-.scroll-btn {
+/* .scroll-btn {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -310,7 +326,21 @@ body {
     z-index: 10;
     transition: transform 0.3s ease;
     box-shadow: none;
-}
+} */
+
+.scroll-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #fff;
+    border: none;
+    padding: 6px 12px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 10;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    color: #1A374D;
+  }
 
 .scroll-btn:hover {
     transform: translateY(-50%) scale(1.2);
@@ -320,18 +350,18 @@ body {
 
 
 .scroll-btn.left {
-    left: -20px;
-}
-
-.scroll-btn.right {
-    right: -20px;
-}
+    left: -30px;
+  }
+  
+  .scroll-btn.right {
+    right: -15px;
+  }
 
 /* Right Side: Dynamic Location Details */
 .location-details {
     text-align: center;
     background: #fff;
-    padding: 0px 0px 20px;
+    padding: 0px 0px 50px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -354,9 +384,10 @@ body {
     color: #555;
 }
 
-
-
-
-
-
+.grid-page {
+    flex: 0 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
   
