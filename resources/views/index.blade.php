@@ -8,7 +8,7 @@
 	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 	<meta http-equiv="Pragma" content="no-cache">
 	<meta http-equiv="Expires" content="0">
-	<link rel="shortcut icon" href="favicon.png">
+	<link rel="icon" href="{{ asset('images/ico_head.svg') }}" type="image/svg+xml">
 
 	<meta name="description" content="" />
 	<meta name="keywords" content="bootstrap, bootstrap4" />
@@ -277,7 +277,7 @@
 	</div> -->
 
 	<div class="package-section">
-		<h2 class="section-title">Common Packages</h2>
+		<h2 class="section-title">Our Top Packages</h2>
 		<div class="packages-container">
 			<!-- Package 1 -->
 			<div class="package-card" style="background-image: url('{{ asset('images/mr-2.webp') }}');">
@@ -285,6 +285,9 @@
 					<h3>4 NIGHTS/5 DAYS SAFARIS – NAIROBI & MARA COMBINATION</h3>
 					<p>Explore Kenya’s famous Maasai Mara in an exciting 5-day safari.</p>
 					<span class="price">From Ksh 2,500 per person sharing*</span>
+					<a href="{{route('packages')}}">
+						<button class="btn btn-primary w-48 mt-3 rounded-pill">View Details</button>
+					</a>
 				</div>
 			</div>
 
@@ -294,26 +297,29 @@
 					<h3>FINCH HATTONS & MAHALI MZURI - 7 NIGHTS FLYING SAFARI</h3>
 					<p>Experience a luxurious 7-night flying safari through Kenya’s most iconic landscapes.</p>
 					<span class="price">From Ksh 6,500 per person sharing*</span>
+					<a href="{{route('packages')}}">
+						<button class="btn btn-primary w-48 mt-3 rounded-pill">View Details</button>
+					</a>
 				</div>
 			</div>
 
 			<!-- Package 3 -->
-			<div class="package-card" style="background-image: url('{{ asset('images/hiking.webp') }}');">
+			<!-- <div class="package-card" style="background-image: url('{{ asset('images/hiking.webp') }}');">
 				<div class="package-details">
 					<h3>7-Day Hiking Safari</h3>
 					<p>Embark on a 7-day adventure exploring Mount Kenya, Aberdare Ranges, and Hell’s Gate.</p>
 					<span class="price">From Kshs /=</span>
 				</div>
-			</div>
+			</div> -->
 
 			<!-- Package 4 -->
-			<div class="package-card" style="background-image: url('{{ asset('images/kicheche.webp') }}');">
+			<!-- <div class="package-card" style="background-image: url('{{ asset('images/kicheche.webp') }}');">
 				<div class="package-details">
 					<h3>Luxury Safari Weekend</h3>
 					<p>Indulge in a luxury getaway at a 5-star safari lodge with game drives and spa treatments.</p>
 					<span class="price">From Kshs /= </span>
 				</div>
-			</div>
+			</div> -->
 		</div>
 	</div>
 
@@ -436,6 +442,8 @@
 	</script>
 
 	<script src="js/custom.js"></script>
+
+	@include('layouts.whatsapp')
 
 	@include('layouts.footer')
 

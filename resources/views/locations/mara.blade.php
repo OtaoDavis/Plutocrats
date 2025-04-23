@@ -5,10 +5,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="author" content="BDC Tech">
-  <link rel="shortcut icon" href="{{ asset('favicon.png') }}">
-  <meta name="description" content="Explore the Maasai Mara Safari Packages" />
-  <meta name="keywords" content="Maasai Mara, Safari, Tours" />
+  <link rel="icon" href="{{ asset('images/ico_head.svg') }}" type="image/svg+xml">
+  <meta name="description" content="Explore the Maasai Mara Safari Packages">
+  <meta name="keywords" content="Maasai Mara, Safari, Tours">
 
+  <!-- Fonts & Styles -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
@@ -17,22 +18,21 @@
   <link rel="stylesheet" href="{{ asset('css/owl.carousel.min.css') }}">
   <link rel="stylesheet" href="{{ asset('css/owl.theme.default.min.css') }}">
   <link rel="stylesheet" href="{{ asset('css/locations.css') }}">
+
   <title>Maasai Mara Safari Packages</title>
 </head>
 
 <body>
   @include('layouts.nav')
 
+  <!-- Hero Section -->
   <section class="hero">
     <div class="owl-carousel owl-theme hero-slider">
-      <div class="slide">
-        <img src="/images/game_drive2.webp" alt="Slide 1">
+      <div class="slide"><img src="/images/game_drive2.webp" alt="Game Drive Experience" loading="lazy">
       </div>
-      <div class="slide">
-        <img src="{{ asset('images/Maasai-Mara-National-Reserve.webp') }}" alt="Slide 2">
-      </div>
-      <div class="slide">
-        <img src="{{ asset('images/hiking.webp') }}" alt="Slide 3">
+      <div class="slide"><img src="{{ asset('images/Maasai-Mara-National-Reserve.webp') }}" alt="Maasai Mara Reserve"
+          loading="lazy"></div>
+      <div class="slide"><img src="{{ asset('images/hiking.webp') }}" alt="Hiking Adventure" loading="lazy">
       </div>
     </div>
     <div class="hero-text">
@@ -46,46 +46,127 @@
     <div class="container">
       <h2 class="locations-title text-center">Safari Packages</h2>
       <div class="packages-wrapper">
-        <button class="scroll-btn-left">
+        <button class="scroll-btn-left" aria-label="Scroll Left">
           <i class="fa-solid fa-arrow-left"></i>
         </button>
 
         <div class="packages-scroll">
           @foreach ([
-          ['title' => '7-Day Luxury Safari', 'desc' => 'A full week of adventure with luxury stays.', 'image' =>
-          'kicheche.webp', 'price' => 250000],
-          ['title' => '5-Day Game Drive', 'desc' => 'Enjoy thrilling game drives across the Mara.', 'image' =>
-          'game_drive.webp', 'price' => 180000],
-          ['title' => '3-Day Budget Safari', 'desc' => 'Affordable and exciting short safari experience.', 'image' =>
-          'budget.png', 'price' => 90000],
-          ['title' => 'Hot Air Balloon Safari', 'desc' => 'Experience the Mara from above at sunrise.', 'image' =>
-          'balloon.jpg', 'price' => 150000],
-          ['title' => 'Exclusive Charter Safari', 'desc' => 'Private charter flights for a VIP safari.', 'image' =>
-          'charter2.webp', 'price' => 500000],
-          ['title' => 'Big Five Expedition', 'desc' => 'Track the legendary Big Five in their natural habitat.', 'image'
-          => 'big-five.webp', 'price' => 200000],
-          ['title' => 'Family Safari', 'desc' => 'Tailored packages for a fun family adventure.', 'image' =>
-          'hiking.webp', 'price' => 160000],
-          ['title' => 'Photography Tour', 'desc' => 'Perfect for wildlife photographers and nature lovers.', 'image' =>
-          'photography.jpg', 'price' => 175000],
-          ['title' => 'Honeymoon Safari', 'desc' => 'Romantic getaway amidst the beauty of the Mara.', 'image' =>
-          'romance.jpg', 'price' => 220000]
+          [
+          'title' => '4 NIGHTS/5 DAYS SAFARIS – NAIROBI & MARA COMBINATION',
+          'desc' => 'A full week of adventure with luxury stays.',
+          'image' => 'kicheche.webp',
+          'price' => 1,
+          'details' => '
+          <p><strong>Day 1: Nairobi</strong><br>
+            Accommodation: Karen Blixen Cottages or Radisson Blu or Crowne Plaza.<br>
+            Meals: Dinner, Breakfast</p>
+          <p><strong>Days 2-5: Masai Mara Game Reserve Safari</strong><br>
+            Transportation: Road or flight, based on preference.<br>
+            Accommodation: Olengoti Safari Camp.<br>
+            Meals: Lunch, Dinner, Breakfast.<br>
+            Experiences: Game drives, Hot Air Balloon Safari, Cultural visits, Nature Walks.<br>
+            Rate: From Kshs. 2,500 per person sharing, depending on month of travel.</p>
+          <p><strong>Cost Includes:</strong><br>
+            • Transport in a customized safari van/4×4 land cruiser for game viewing.<br>
+            • Airport pick-up and drop-off.<br>
+            • Accommodation as per the itinerary.<br>
+            • All meals while on safari.<br>
+            • Services of our professional and knowledgeable driver-guide.<br>
+            • All park entrance fees.<br>
+            • All game drives.<br>
+            • Statutory taxes.<br>
+            • Balloon safari.<br>
+            • Maasai Village visit.</p>
+          <p><strong>Not Included:</strong><br>
+            • Personal insurance.<br>
+            • Items of personal nature.<br>
+            • Alcoholic & soft drinks.<br>
+            • Visa fees.<br>
+            • Tips.</p>',
+          ],
+          [
+          'title' => '5-Day Game Drive',
+          'desc' => 'Enjoy thrilling game drives across the Mara.',
+          'image' => 'game_drive.webp',
+          'price' => 180000,
+          'details' => '
+          to be added',
+          ],
+          [
+          'title' => '3-Day Budget Safari',
+          'desc' => 'Affordable and exciting short safari experience.',
+          'image' => 'budget.png',
+          'price' => 90000,
+          'details' => '
+          to be added',
+          ],
+          [
+          'title' => 'Hot Air Balloon Safari',
+          'desc' => 'Experience the Mara from above at sunrise.',
+          'image' => 'balloon.jpg',
+          'price' => 150000,
+          'details' => '
+          to be added',
+          ],
+          [
+          'title' => 'Exclusive Charter Safari',
+          'desc' => 'Private charter flights for a VIP safari.',
+          'image' => 'charter2.webp',
+          'price' => 500000,
+          'details' => '
+          to be added',
+          ],
+          [
+          'title' => 'Big Five Expedition',
+          'desc' => 'Track the legendary Big Five in their natural habitat.',
+          'image' => 'big-five.webp',
+          'price' => 200000,
+          'details' => '
+          to be added',
+          ],
+          [
+          'title' => 'Family Safari',
+          'desc' => 'Tailored packages for a fun family adventure.',
+          'image' => 'hiking.webp',
+          'price' => 160000,
+          'details' => '
+          to be added',
+          ],
+          [
+          'title' => 'Photography Tour',
+          'desc' => 'Perfect for wildlife photographers and nature lovers.',
+          'image' => 'photography.jpg',
+          'price' => 175000,
+          'details' => '
+          to be added',
+          ],
+          [
+          'title' => 'Honeymoon Safari',
+          'desc' => 'Romantic getaway amidst the beauty of the Mara.',
+          'image' => 'romance.jpg',
+          'price' => 220000,
+          'details' => '
+          to be added',
+          ],
           ] as $package)
-          <div class="package-card" style="background-image: url('{{ asset('images/' . $package['image']) }}');">
+          <div class="package-card" data-bs-toggle="modal" data-bs-target="#bookingModal"
+            data-title="{{ $package['title'] }}" data-desc="{{ $package['desc'] }}"
+            data-image-name="{{ $package['image'] }}" data-price="{{ $package['price'] }}"
+            data-details="{{ $package['details'] }}"
+            style="background-image: url('{{ asset('images/' . $package['image']) }}');">
             <div class="overlay">
               <h3>{{ $package['title'] }}</h3>
               <p>{{ $package['desc'] }}</p>
-              <button class="book-btn" data-bs-toggle="modal" data-bs-target="#bookingModal"
-                data-title="{{ $package['title'] }}" data-desc="{{ $package['desc'] }}"
-                data-image-name="{{ $package['image'] }}" data-price="{{ $package['price'] }}">
+              <span class="book-text" role="button">
                 View Details
-              </button>
+              </span>
             </div>
           </div>
           @endforeach
         </div>
 
-        <button class="scroll-btn-right">
+        <button class="scroll-btn-right" aria-label="Scroll Right">
           <i class="fa-solid fa-arrow-right"></i>
         </button>
       </div>
@@ -107,8 +188,11 @@
               <h4 id="modalTitle"></h4>
               <p id="modalDesc"></p>
               <p><strong>Price:</strong> Kshs. <span id="modalPrice"></span></p>
-              <a id="modalBookBtn" href="#" class="btn btn-primary mt-3 w-100">Proceed to Booking</a>
+              <div id="modalDetails"></div>
+              <a id="modalBookBtn" href="#" class="btn btn-primary mt-3 w-100">Proceed to
+                Booking</a>
             </div>
+
           </div>
         </div>
       </div>
@@ -122,29 +206,66 @@
       <div class="row">
         <!-- Left Side: Location Grid -->
         <div class="col-md-6 position-relative">
+          <!-- Left Arrow -->
           <button class="scroll-btn left" onclick="scrollGrid(-1)">&#10094;</button>
 
-          <div class="locations-grid-wrapper">
-            <div class="locations-grid">
-              @foreach ([
-              ['name' => 'Angama Mara', 'desc' => 'Perched on the edge of the Great Rift Valley, this lodge provides
-              breathtaking vistas of the Maasai Mara.', 'image' => 'angama.webp'],
-              ['name' => 'Mara Bushtops', 'desc' => 'A luxury safari camp offering panoramic views and exceptional
-              service.', 'image' => 'mara_bush.webp'],
-              ['name' => 'Olare Mara', 'desc' => 'A high-end camp located in the Olare Motorogi Conservancy, known for
-              its rich wildlife.', 'image' => 'olare.webp'],
-              ['name' => 'Rekero Camp', 'desc' => 'Situated in the heart of the Maasai Mara, offering authentic safari
-              experiences.', 'image' => 'rekero.webp'],
-              ] as $destination)
-              <div class="location-card"
-                onclick="showDetails('{{ addslashes($destination['name']) }}', '{{ addslashes($destination['desc']) }}', '{{ asset('images/' . $destination['image']) }}')">
-                <img src="{{ asset('images/' . $destination['image']) }}" alt="{{ $destination['name'] }}">
-                <h3>{{ $destination['name'] }}</h3>
+          <div class="locations-grid-wrapper overflow-hidden">
+            <div class="locations-grid d-flex flex-nowrap" id="locationsGrid">
+              @php
+              $destinations = [
+              [
+              'name' => 'Angama Mara',
+              'desc' => 'Perched on the edge of the Great Rift Valley, this lodge provides
+              breathtaking vistas of the Maasai Mara.',
+              'image' => 'angama.webp',
+              'price' => 00,
+              ],
+
+              [
+              'name' => 'Mara Bushtops',
+              'desc' => 'A luxury safari camp offering panoramic views and exceptional
+              service',
+              'image' => 'mara_bush.webp',
+              'price' => 0,
+              ],
+
+              [
+              'name' => 'Olare Mara',
+              'desc' => 'A high-end camp located in the Olare Motorogi Conservancy, known for
+              its rich wildlife.',
+              'image' => 'olare.webp',
+              'price' => 00,
+              ],
+
+              [
+              'name' => 'Rekero Camp',
+              'desc' => 'Situated in the heart of the Maasai Mara, offering authentic safari
+              experiences.',
+              'image' => 'rekero.webp',
+              'price' => 00,
+              ],
+              ];
+              $chunks = array_chunk($destinations, 4); // 2x2 layout = 4 cards per scroll "page"
+              @endphp
+
+              @foreach ($chunks as $chunk)
+              <div class="grid-page d-flex flex-wrap me-4" style="width: 520px;">
+                @foreach ($chunk as $destination)
+                <div class="location-card m-2 flex-shrink-0" onclick="showDetails(
+                      '{{ $destination['name'] }}',
+                      `{{ addslashes($destination['desc']) }}`,
+                      '{{ asset('images/' . $destination['image']) }}',
+                      '{{ number_format($destination['price']) }}'
+                    )" style="width: 240px; height: 260px; cursor: pointer;">
+                  <img src="{{ asset('images/' . $destination['image']) }}" alt="{{ $destination['name'] }}"
+                    class="img-fluid rounded mb-2" style="height: 150px; object-fit: cover;">
+                  <h5 class="text-center mb-1">{{ $destination['name'] }}</h5>
+                </div>
+                @endforeach
               </div>
               @endforeach
             </div>
           </div>
-
 
           <!-- Right Arrow -->
           <button class="scroll-btn right" onclick="scrollGrid(1)">&#10095;</button>
@@ -152,11 +273,15 @@
 
         <!-- Right Side: Dynamic Detail Display -->
         <div class="col-md-6">
-          <div class="location-details">
-            <img id="location-image" src="{{ asset('images/angama.webp') }}" alt="Location">
+          <div class="location-details text-center mt-4 mt-md-0">
+            <img id="location-image" src="{{ asset('images/angama.webp') }}" alt="Location"
+              class="img-fluid rounded mb-3" style="height: 250px; object-fit: cover;" />
             <h3 id="location-title">Angama Mara</h3>
-            <p id="location-desc">Perched on the edge of the Great Rift Valley, this lodge provides breathtaking vistas
-              of the Maasai Mara.</p>
+            <p id="location-desc" class="px-4">Perched on the edge of the Great Rift Valley, this lodge provides
+              breathtaking vistas of the Maasai Mara.</p>
+            <p id="location-price" class="fw-bold mt-2">
+              Price ranging from <strong>$00</strong> per person depending on month of travel
+            </p>
           </div>
         </div>
       </div>
@@ -167,59 +292,35 @@
   <section class="booking-guidance">
     <div class="container">
       <h2 class="locations-title text-center">Booking Guidance</h2>
-      <p class="text-center">Planning your Maasai Mara adventure? Follow these steps to secure your dream safari.</p>
-
+      <p class="text-center">Planning your Maasai Mara adventure? Follow these steps to secure your dream
+        safari.</p>
       <div class="row">
+        @foreach ([
+        'Choose Your Package' => 'Explore our safari packages and select one that suits your budget and preferences.',
+        'Confirm Availability' => 'Contact our team to check availability for your preferred travel dates.',
+        'Make Your Payment' => 'Secure your booking with a deposit or full payment via our available payment options.',
+        'Receive Confirmation' => 'Once payment is received, we will send you a confirmation email with all details.',
+        'Prepare for Your Safari' => 'Pack essentials, check visa and travel requirements, and get ready for an
+        unforgettable experience.',
+        'Enjoy Your Adventure!' => 'Arrive, relax, and immerse yourself in the beauty of Maasai Mara with expert
+        guides.',
+        ] as $title => $text)
         <div class="col-md-4">
           <div class="guidance-card">
-            <h3>1. Choose Your Package</h3>
-            <p>Explore our safari packages and select one that suits your budget and preferences.</p>
+            <h3>{{ $loop->iteration }}. {{ $title }}</h3>
+            <p>{{ $text }}</p>
           </div>
         </div>
-
-        <div class="col-md-4">
-          <div class="guidance-card">
-            <h3>2. Confirm Availability</h3>
-            <p>Contact our team to check availability for your preferred travel dates.</p>
-          </div>
-        </div>
-
-        <div class="col-md-4">
-          <div class="guidance-card">
-            <h3>3. Make Your Payment</h3>
-            <p>Secure your booking with a deposit or full payment via our available payment options.</p>
-          </div>
-        </div>
-
-        <div class="col-md-4">
-          <div class="guidance-card">
-            <h3>4. Receive Confirmation</h3>
-            <p>Once payment is received, we will send you a confirmation email with all details.</p>
-          </div>
-        </div>
-
-        <div class="col-md-4">
-          <div class="guidance-card">
-            <h3>5. Prepare for Your Safari</h3>
-            <p>Pack essentials, check visa and travel requirements, and get ready for an unforgettable experience.</p>
-          </div>
-        </div>
-
-        <div class="col-md-4">
-          <div class="guidance-card">
-            <h3>6. Enjoy Your Adventure!</h3>
-            <p>Arrive, relax, and immerse yourself in the beauty of Maasai Mara with expert guides.</p>
-          </div>
-        </div>
+        @endforeach
       </div>
     </div>
   </section>
 
+  <!-- Scripts -->
   <script src="{{ asset('js/jquery-3.4.1.min.js') }}"></script>
   <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
   <script>
     $(document).ready(function () {
-      console.log("Owl Carousel initializing...");
       $(".hero-slider").owlCarousel({
         items: 1,
         loop: true,
@@ -238,6 +339,7 @@
       const desc = button.getAttribute('data-desc');
       const imageName = button.getAttribute('data-image-name');
       const price = button.getAttribute('data-price');
+      const details = button.getAttribute('data-details');
 
       const imagePath = `/images/${imageName}`;
 
@@ -245,12 +347,28 @@
       bookingModal.querySelector('#modalDesc').textContent = desc;
       bookingModal.querySelector('#modalImage').src = imagePath;
       bookingModal.querySelector('#modalPrice').textContent = price;
+      bookingModal.querySelector('#modalDetails').innerHTML = details;
 
       const encodedTitle = encodeURIComponent(title);
-      const encodedPrice = encodeURIComponent(price); // Pass the price in the URL
+      const encodedPrice = encodeURIComponent(price);
       const bookingUrl = `/booking?title=${encodedTitle}&image=${imageName}&price=${encodedPrice}`;
       bookingModal.querySelector('#modalBookBtn').href = bookingUrl;
     });
+
+    function showDetails(name, desc, image, price) {
+      document.getElementById('location-title').textContent = name;
+      document.getElementById('location-desc').textContent = desc;
+      document.getElementById('location-image').src = image;
+      document.getElementById('location-price').innerHTML = `Price ranging from <strong>$${price}</strong> per person depending on month of travel`;
+    }
+
+    function scrollGrid(direction) {
+      const grid = document.getElementById('locationsGrid');
+      grid.scrollBy({
+        left: direction * 540,
+        behavior: 'smooth'
+      });
+    }
   </script>
 
   @include('layouts.footer')

@@ -90,3 +90,14 @@ h6 {
 .list-group-item a:hover {
     text-decoration: underline;
 }
+
+.det_btn{
+    background-color: #b48f20;
+    color: #1A374D;
+    border-radius: 20px #1A374D;
+}
+
+.det_btn{
+    background-color:#1A374D;
+    color: #b48f20;
+}

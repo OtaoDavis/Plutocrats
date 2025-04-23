@@ -22,6 +22,7 @@ class BookingController extends Controller
             'children' => 'nullable|integer|min:0',
             'location' => 'required|string|max:255',
             'price' => 'required|integer|min:1',
+            'title' => 'required|string|max:255',
         ]);
 
         Booking::create([
@@ -33,6 +34,7 @@ class BookingController extends Controller
             'status' => 'pending',
             'location' => $request->location,
             'price' => $request->price,
+            'title' => $request->title,
         ]);
 
         return redirect()->route('user_dash')->with('success', 'Booking created successfully.');
@@ -140,5 +142,25 @@ public function setPackagePrice(Request $request)
     return response()->json(['message' => 'Price saved in session']);
 }
 
+public function destroy($id)
+{
+    $booking = Booking::find($id);
+
+    if (!$booking) {
+        return redirect()->back()->with('error', 'Booking not found.');
+    }
+
+    // Optional: Check if the user owns the booking
+    if ($booking->user_id !== Auth::id()) {
+        return redirect()->back()->with('error', 'Unauthorized action.');
+    }
+
+    try {
+        $booking->delete();
+        return redirect()->back()->with('success', 'Booking deleted successfully.');
+    } catch (\Exception $e) {
+        return redirect()->back()->with('error', 'Failed to delete booking.');
+    }
+}
 
 }

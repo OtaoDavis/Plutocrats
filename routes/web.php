@@ -6,6 +6,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\UserDashController;
+use App\Http\Controllers\PaymentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -65,6 +66,8 @@ Route::get('/bookings/{id}', [BookingController::class, 'show'])->name('booking.
 Route::post('/booking/submit', [BookingController::class, 'submit'])->name('booking.submit');
 Route::post('/book/confirm', [BookingController::class, 'confirm'])->name('booking.confirm');
 Route::post('/set-package-price', [BookingController::class, 'setPackagePrice']);
+Route::delete('/bookings/{id}', [BookingController::class, 'destroy'])->name('booking.delete');
 
-
+Route::post('/paystack/initialize', [PaymentController::class, 'initialize'])->name('paystack.initialize');
+Route::get('/paystack/callback', [PaymentController::class, 'callback'])->name('paystack.callback');
 
