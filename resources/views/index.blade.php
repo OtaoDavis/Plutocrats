@@ -33,7 +33,7 @@
 	<link rel="stylesheet" href="{{ asset('css/style.css') }}">
 	<link rel="icon" href="{{ asset('img/ico_logo.webp') }}?v={{ time() }}">
 
-	<title>Tours and Travel</title>
+	<title>Home</title>
 </head>
 
 <body>
@@ -61,32 +61,35 @@
 								<form class="form">
 									<div class="row mb-2">
 										<div class="col-sm-12 col-md-6 mb-3 mb-lg-0 col-lg-4">
-											<select name="" id="" class="form-control custom-select">
+											<select name="destination" id="destination"
+												class="form-control custom-select" required>
 												<option value="">Destination</option>
-												<option value="">Tsavo</option>
-												<option value="">Maasai Mara</option>
-												<option value="">Amboseli</option>
-												<option value="">Hell's Gate</option>
-												<option value="">Samburu</option>
-												<option value="">etc</option>
+												<option value="tsavo">Tsavo</option>
+												<option value="mara">Maasai Mara</option>
+												<option value="amboseli">Amboseli</option>
+												<option value="olpejeta">Ol Pejeta</option>
+												<option value="hells-gate">Hell's Gate</option>
+												<option value="samburu">Samburu</option>
+												<option value="etc">Other Destination</option>
 											</select>
 										</div>
 										<div class="col-sm-12 col-md-6 mb-3 mb-lg-0 col-lg-5">
-											<input type="text" class="form-control" name="daterange">
+											<input type="text" class="form-control" name="daterange"
+												placeholder="Select Date Range">
 										</div>
 										<div class="col-sm-12 col-md-6 mb-3 mb-lg-0 col-lg-3">
-											<input type="text" class="form-control" placeholder="# of People">
+											<input type="number" class="form-control" name="people"
+												placeholder="# of People" min="1">
 										</div>
-
 									</div>
 									<div class="row align-items-center">
 										<div class="col-sm-12 col-md-6 mb-3 mb-lg-0 col-lg-4">
-											<input type="submit" class="btn btn-primary btn-block" value="Get Quote">
+											<button type="submit" class="btn btn-primary btn-block">Explore Now</button>
 										</div>
 										<div class="col-lg-8">
 											<label class="control control--checkbox mt-3">
 												<span class="caption">Save this search</span>
-												<input type="checkbox" checked="checked" />
+												<input type="checkbox" checked="checked" name="save_search" value="1" />
 												<div class="control__indicator"></div>
 											</label>
 										</div>
@@ -94,6 +97,7 @@
 								</form>
 							</div>
 						</div>
+
 					</div>
 				</div>
 				<div class="col-lg-5">
@@ -121,43 +125,6 @@
 				<!-- Location 1 -->
 				<div class="col-md-4 mb-4">
 					<div class="destination-item">
-						<a class="media-thumb" href="{{route('mara')}}">
-							<img src="images/cheetah.webp" alt="Maasai Mara" class="img-fluid">
-							<div class="media-text">
-								<h3>Maasai Mara</h3>
-								<span class="location">Kenya</span>
-								<p>A breathtaking wildlife reserve known for the Great Migration and
-									diverse animal species.</p>
-								<span class="explore-text">
-									Explore
-								</span>
-							</div>
-						</a>
-					</div>
-				</div>
-
-				<!-- Location 2 -->
-				<div class="col-md-4 mb-4">
-					<div class="destination-item">
-						<a class="media-thumb" href="images/elephants.webp" data-fancybox="gallery">
-							<img src="images/elephants.webp" alt="Tsavo West" class="img-fluid">
-							<div class="media-text">
-								<h3>Tsavo </h3>
-								<span class="location">Kenya</span>
-								<p>Kenya’s largest park, Tsavo, is famed for its red elephants, stunning landscapes, and
-									rich wildlife.</p>
-								<span class="explore-text">
-									Explore
-								</span>
-
-							</div>
-						</a>
-					</div>
-				</div>
-
-				<!-- Location 3 -->
-				<div class="col-md-4 mb-4">
-					<div class="destination-item">
 						<a class="media-thumb" href="{{route('amboseli')}}">
 							<img src="images/hero-slider-3.jpg" alt="Amboseli" class="img-fluid">
 							<div class="media-text">
@@ -173,16 +140,53 @@
 					</div>
 				</div>
 
-				<!-- Location 4 -->
+				<!-- Location 2 -->
 				<div class="col-md-4 mb-4">
 					<div class="destination-item">
-						<a class="media-thumb" href="{{(route('tsavo'))}}">
+						<a class="media-thumb" href="{{(route('olpejeta'))}}">
 							<img src="images/kicheche.webp" alt="Tsavo East" class="img-fluid">
 							<div class="media-text">
 								<h3>Ol Pejeta</h3>
 								<span class="location">Kenya</span>
 								<p>A renowned conservancy home to the last two northern white rhinos and diverse
 									wildlife.</p>
+								<span class="explore-text">
+									Explore
+								</span>
+							</div>
+						</a>
+					</div>
+				</div>
+
+				<!-- Location 3 -->
+				<div class="col-md-4 mb-4">
+					<div class="destination-item">
+						<a class="media-thumb" href="{{(route('tsavo'))}}" data-fancybox="gallery">
+							<img src="images/elephants.webp" alt="Tsavo West" class="img-fluid">
+							<div class="media-text">
+								<h3>Tsavo </h3>
+								<span class="location">Kenya</span>
+								<p>Kenya’s largest park, Tsavo, is famed for its red elephants, stunning landscapes, and
+									rich wildlife.</p>
+								<span class="explore-text">
+									Explore
+								</span>
+
+							</div>
+						</a>
+					</div>
+				</div>
+
+				<!-- Location 4 -->
+				<div class="col-md-4 mb-4">
+					<div class="destination-item">
+						<a class="media-thumb" href="{{route('mara')}}">
+							<img src="images/cheetah.webp" alt="Maasai Mara" class="img-fluid">
+							<div class="media-text">
+								<h3>Maasai Mara</h3>
+								<span class="location">Kenya</span>
+								<p>A breathtaking wildlife reserve known for the Great Migration and
+									diverse animal species.</p>
 								<span class="explore-text">
 									Explore
 								</span>
@@ -438,6 +442,44 @@
 		function togglePackageDetails(card) {
 			card.classList.toggle('open');
 		}
+		document.addEventListener('DOMContentLoaded', function () {
+			const destinationSelect = document.getElementById('destination');
+			const form = document.querySelector('.form');
+
+			form.addEventListener('submit', function (event) {
+				event.preventDefault(); // Prevent the default form submission
+
+				if (destinationSelect.value === '') {
+					alert('Please choose a destination.');
+					return;
+				}
+
+				let redirectRoute = '';
+				switch (destinationSelect.value) {
+					case 'mara':
+						redirectRoute = '{{ route('mara') }}';
+						break;
+					case 'tsavo':
+						redirectRoute = '{{ route('tsavo') }}';
+						break;
+					case 'amboseli':
+						redirectRoute = '{{ route('amboseli') }}';
+						break;
+					case 'olpejeta':
+						redirectRoute = '{{ route('olpejeta') }}';
+						break;
+					// Add cases for other specific destinations if you create routes for them
+					default:
+						// Handle the 'etc' or any unhandled destination - maybe redirect to a general locations page
+						redirectRoute = '/home'; // Example fallback
+						break;
+				}
+
+				if (redirectRoute) {
+					window.location.href = redirectRoute;
+				}
+			});
+		});
 
 	</script>
 

@@ -273,7 +273,8 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
             padding: 5px 20px;
             display: block; }
             .site-nav .site-navigation .site-menu .has-children .dropdown > li > a:hover {
-              color: #1A374D; }
+              color: #b48f20;
+              text-decoration: none; }
           .site-nav .site-navigation .site-menu .has-children .dropdown > li.has-children > a:before {
             content: "\e315";
             right: 20px; }
@@ -557,11 +558,11 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
   outline: none; }  
 
 .about-text{
-  color: #1A374D;
+  color: #fff;
 }
 
 .hero {
-  padding: 7rem 0 10rem 0;
+  padding: 1rem 0 10rem 0;
   background: #b48f20;
   margin-bottom: 100px; }
   .hero.hero-inner {

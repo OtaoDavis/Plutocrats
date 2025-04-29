@@ -390,4 +390,17 @@ body {
     flex-wrap: wrap;
     justify-content: space-between;
   }
+
+#bookNowBtn.custom-book-button{
+    background-color: #b48f20;
+    color: #fff;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+#bookNowBtn.custom-book-button:hover{
+    background-color: #1A374D;
+    color: #fff;
+
+}
   

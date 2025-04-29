@@ -46,7 +46,7 @@
 <body>
     <div class="whatsapp-help">
         <p>Need Help?</p>
-        <a href="https://wa.me/254111849643" target="_blank">
+        <a href="https://wa.me/254737444066" target="_blank">
             <img src="{{ asset('images/whatsapp.webp') }}" alt="WhatsApp Chat">
         </a>
     </div>

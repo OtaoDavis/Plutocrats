@@ -1,34 +1,32 @@
-/* Global Styles */
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f8f9fa;
     margin: 0;
     padding: 0;
-}
-
-
+    display: flex; 
+    flex-direction: column; 
+    min-height: 100vh;}
 
 .card {
     border: 1px solid #ddd;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(180, 143, 32, 0.2); /* Added shadow with the specified color */
     margin-bottom: 20px;
     transition: all 0.3s ease;
 }
 
 .card:hover {
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 6px 12px rgba(180, 143, 32, 0.3); /* Hover effect for the card */
 }
 
 .card-body {
     padding: 20px;
 }
 
-/* Main content container */
 .main-content {
-    height: 100vh;
+    flex-grow: 1; 
     display: flex;
-    flex-direction: column;
+    flex-direction: column; 
 }
 
 /* Heading Styles */
@@ -44,6 +42,36 @@ body {
     padding: 10px;
     font-size: 1rem;
 }
+
+.booking-card {
+    flex: 0 0 auto;
+    width: 240px;
+    scroll-snap-align: start;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px #b48f20;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.booking-card:last-child {
+    margin-right: 0;
+}
+
+.booking-card img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+}
+.booking-card .card-title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 
 /* Specific Styles for History Section */
 .history-item {
@@ -91,13 +119,71 @@ h6 {
     text-decoration: underline;
 }
 
-.det_btn{
-    background-color: #b48f20;
-    color: #1A374D;
-    border-radius: 20px #1A374D;
+/* Center the buttons */
+button, .btn {
+    display: block;
+    width: 100%;
+    margin: 10px 0; /* Adds some space around buttons */
+    text-align: center;
 }
 
-.det_btn{
-    background-color:#1A374D;
+/* Specific button styles */
+.det_btn {
+    background-color: #b48f20;
+    color: #1A374D;
+    border-radius: 20px;
+}
+
+.det_btn:hover {
+    background-color: #1A374D;
     color: #b48f20;
+}
+
+/* Make booking cards scrollable */
+.bookings-container {
+    max-height: 500px; /* Adjust the height as needed */
+    overflow-y: scroll; /* Allow vertical scrolling */
+    padding: 10px;
+    margin-top: 20px;
+}
+
+/* Profile Card styles */
+.card-body .btn-primary {
+    margin-top: 10px;
+    width: 100%;
+}
+
+/* Styling for the delete button */
+.card-footer form button {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    border: none;
+    background: none;
+    color: #dc3545;
+    font-size: 1.1rem;
+}
+
+/* Modal styling */
+.modal-content {
+    background-color: #1A374D;
+    color: #b48f20;
+}
+
+/* Scrollable Card Container for Bookings */
+.card.mb-4 {
+    max-height: 600px;
+    overflow-y: auto;
+}
+
+/* History Section Styling */
+.history-item {
+    margin: 10px 0;
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Padding and margin fixes */
+.card-body, .history-section .card-body {
+    padding: 20px;
 }

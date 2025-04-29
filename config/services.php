@@ -31,4 +31,12 @@ return [
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
 
+    'intasend' => [
+    'public_key' => env('INTASEND_PUBLIC_KEY'),
+    'secret_key' => env('INTASEND_SECRET_KEY'),
+    'env' => env('INTASEND_ENV', 'sandbox'),
+    'ngrok_url' => env('INTASEND_NGROK_URL'),
+    ],
+
+
 ];

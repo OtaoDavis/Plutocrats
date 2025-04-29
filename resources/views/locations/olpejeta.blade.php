@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="{{ asset('css/owl.theme.default.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/locations.css') }}">
 
-    <title>Amboseli Safari Packages</title>
+    <title>Ol Pejeta Safari Packages</title>
 </head>
 
 <body>
@@ -31,25 +31,26 @@
     <section class="hero">
         <div class="owl-carousel owl-theme hero-slider">
             <div class="slide">
-                <img src="/images/amboseli_1.webp" alt="Slide 1">
+                <img src="/images/pej-1.webp" alt="Slide 1">
             </div>
             <div class="slide">
-                <img src="{{ asset('images/amboseli_2.webp') }}" alt="Slide 2">
+                <img src="{{ asset('images/pej-2.webp') }}" alt="Slide 2">
             </div>
             <div class="slide">
-                <img src="{{ asset('images/amboseli_4.webp') }}" alt="Slide 4">
+                <img src="{{ asset('images/pej-3.webp') }}" alt="Slide 4">
             </div>
-            <div class="slide">
-                <img src="{{ asset('images/amboseli_5.webp') }}" alt="Slide 5">
-            </div>
-
         </div>
         <div class="hero-text">
-            <h1>Explore Amboseli</h1>
-            <p>Discover the majestic beauty of Amboseli, where vast open plains meet the iconic backdrop of Mount
-                Kilimanjaro.
-                Experience close encounters with elephants and other wildlife in one of Kenya’s most scenic national
-                parks.</p>
+            <h1>Explore Ol Pejeta</h1>
+            <p>Venture into Ol Pejeta Conservancy, a unique blend of safari adventure and cutting-edge conservation.
+                Nestled
+                between the foothills of the Aberdares and Mount Kenya, Ol Pejeta is home to the Big Five and the
+                last two
+                remaining northern white rhinos on the planet. Experience thrilling game drives, visit the
+                chimpanzee sanctuary,
+                and witness impactful conservation efforts in one of Kenya’s most remarkable wildlife destinations.
+            </p>
+
 
         </div>
     </section>
@@ -60,41 +61,94 @@
         <div class="container">
             <h2 class="locations-title text-center">Safari Packages</h2>
             <div class="packages-wrapper">
-                <button class="scroll-btn-left">
+                <button class="scroll-btn-left" aria-label="Scroll Left">
                     <i class="fa-solid fa-arrow-left"></i>
                 </button>
 
                 <div class="packages-scroll">
                     @foreach ([
-                    ['title' => '7-Day Luxury Safari', 'desc' => 'A full week of adventure with luxury stays.', 'image'
-                    => 'kicheche.webp', 'price' => 250000],
-                    ['title' => '5-Day Game Drive', 'desc' => 'Enjoy thrilling game drives across the Mara.', 'image' =>
-                    'game_drive.webp', 'price' => 180000],
-                    ['title' => '3-Day Budget Safari', 'desc' => 'Affordable and exciting short safari experience.',
-                    'image' => 'budget.png', 'price' => 90000],
-                    ['title' => 'Hot Air Balloon Safari', 'desc' => 'Experience the Mara from above at sunrise.',
-                    'image' => 'balloon.jpg', 'price' => 150000],
-                    ['title' => 'Exclusive Charter Safari', 'desc' => 'Private charter flights for a VIP safari.',
-                    'image' => 'charter2.webp', 'price' => 500000],
-                    ['title' => 'Big Five Expedition', 'desc' => 'Track the legendary Big Five in their natural
-                    habitat.', 'image' => 'big-five.webp', 'price' => 200000],
-                    ['title' => 'Family Safari', 'desc' => 'Tailored packages for a fun family adventure.', 'image' =>
-                    'hiking.webp', 'price' => 160000],
-                    ['title' => 'Photography Tour', 'desc' => 'Perfect for wildlife photographers and nature lovers.',
-                    'image' => 'photography.jpg', 'price' => 175000],
-                    ['title' => 'Honeymoon Safari', 'desc' => 'Romantic getaway amidst the beauty of the Mara.', 'image'
-                    => 'romance.jpg', 'price' => 220000],
+                    [
+                    'title' => 'Hot Air Balloon Safari',
+                    'desc' => 'Experience the Mara from above at sunrise.',
+                    'image' => 'balloon.jpg',
+                    'price' => 150000,
+                    'details' => '
+                    to be added',
+                    ],
+                    [
+                    'title' => '5-Day Game Drive',
+                    'desc' => 'Enjoy thrilling game drives across the Mara.',
+                    'image' => 'game_drive.webp',
+                    'price' => 180000,
+                    'details' => '
+                    to be added',
+                    ],
+                    [
+                    'title' => '3-Day Budget Safari',
+                    'desc' => 'Affordable and exciting short safari experience.',
+                    'image' => 'budget.png',
+                    'price' => 90000,
+                    'details' => '
+                    to be added',
+                    ],
+                    [
+                    'title' => 'Hot Air Balloon Safari',
+                    'desc' => 'Experience the Mara from above at sunrise.',
+                    'image' => 'balloon.jpg',
+                    'price' => 150000,
+                    'details' => '
+                    to be added',
+                    ],
+                    [
+                    'title' => 'Exclusive Charter Safari',
+                    'desc' => 'Private charter flights for a VIP safari.',
+                    'image' => 'charter2.webp',
+                    'price' => 500000,
+                    'details' => '
+                    to be added',
+                    ],
+                    [
+                    'title' => 'Big Five Expedition',
+                    'desc' => 'Track the legendary Big Five in their natural habitat.',
+                    'image' => 'big-five.webp',
+                    'price' => 200000,
+                    'details' => '
+                    to be added',
+                    ],
+                    [
+                    'title' => 'Family Safari',
+                    'desc' => 'Tailored packages for a fun family adventure.',
+                    'image' => 'hiking.webp',
+                    'price' => 160000,
+                    'details' => '
+                    to be added',
+                    ],
+                    [
+                    'title' => 'Photography Tour',
+                    'desc' => 'Perfect for wildlife photographers and nature lovers.',
+                    'image' => 'photography.jpg',
+                    'price' => 175000,
+                    'details' => '
+                    to be added',
+                    ],
+                    [
+                    'title' => 'Honeymoon Safari',
+                    'desc' => 'Romantic getaway amidst the beauty of the Mara.',
+                    'image' => 'romance.jpg',
+                    'price' => 220000,
+                    'details' => '
+                    to be added',
+                    ],
                     ] as $package)
                     <div class="package-card" data-bs-toggle="modal" data-bs-target="#bookingModal"
                         data-title="{{ $package['title'] }}" data-desc="{{ $package['desc'] }}"
                         data-image-name="{{ $package['image'] }}" data-price="{{ $package['price'] }}"
+                        data-details="{{ $package['details'] }}"
                         style="background-image: url('{{ asset('images/' . $package['image']) }}');">
                         <div class="overlay">
                             <h3>{{ $package['title'] }}</h3>
                             <p>{{ $package['desc'] }}</p>
-                            <span class="book-text" data-bs-toggle="modal" data-bs-target="#bookingModal"
-                                data-title="{{ $package['title'] }}" data-desc="{{ $package['desc'] }}"
-                                data-image-name="{{ $package['image'] }}" data-price="{{ $package['price'] }}">
+                            <span class="book-text" role="button">
                                 View Details
                             </span>
                         </div>
@@ -102,7 +156,7 @@
                     @endforeach
                 </div>
 
-                <button class="scroll-btn-right">
+                <button class="scroll-btn-right" aria-label="Scroll Right">
                     <i class="fa-solid fa-arrow-right"></i>
                 </button>
             </div>
@@ -124,9 +178,11 @@
                             <h4 id="modalTitle"></h4>
                             <p id="modalDesc"></p>
                             <p><strong>Price:</strong> Kshs. <span id="modalPrice"></span></p>
+                            <div id="modalDetails"></div>
                             <a id="modalBookBtn" href="#" class="btn btn-primary mt-3 w-100">Proceed to
                                 Booking</a>
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -148,110 +204,48 @@
                             @php
                             $destinations = [
                             [
-                            'title' => 'Tawi Lodge',
-                            'desc' => 'With only 13 cottages set on either side of the main lodge building,
-                            all cottages have a spectacular view of Mt. Kilimanjaro. Tawi Lodge is located on a private
-                            conservancy of
-                            3,000 acres, just five minutes from Kimana Gate, the eastern entrance to Amboseli National
-                            Park, at the
-                            foot of Mount Kilimanjaro (5,895m) – the world’s largest free-standing mountain.',
-                            'image' => 'tawi_lodge.webp',
-                            'price' => 330,
-                            'currency' => 'USD',
-                            ],
-
-                            [
-                            'title' => 'Tulia Camp',
-                            'desc' => 'Named after the Swahili word for ‘peaceful’, the Tulia Amboseli Camp
-                            depicts just this in its classic and cozy design and tranquil setting. Tulia Camp is located
-                            just outside
-                            Amboseli National Park and comprises 20 classic, large tents all offering amazing views of
-                            Mt.
-                            Kilimanjaro.
-                            A waterhole lies in front of the lodge offering entertainment to guests either dining in the
-                            intimate
-                            canvas-walled and reeded roof restaurant, or relaxing in the lounge. With great sunset
-                            views, sundowners
-                            around the campfire is a popular activity for guests enjoying their stay at Tulia Amboseli
-                            Camp
-                            the Swahili word for ‘peaceful’, the Tulia Amboseli Camp
-                            depicts just this in its classic and cozy design and tranquil setting...',
-                            'image' => 'tulia_camp.webp',
-                            'price' => 0,
-                            'currency' => 'USD',
-                            ],
-
-                            [
-                            'title' => 'ELEWANA TORTILIS',
-                            'desc' => 'Tortilis Camp was one of the first eco-lodges of its size, and
-                            is very proudly 100% solar. Guests can rest assured they are leaving a minimal footprint
-                            during their
-                            stay.
-                            Located in a private conservancy bordering the national park, game drives, walks, sundowners
-                            and bush
-                            meals take place both inside the national park and in the conservancy, where guests enjoy
-                            exclusivity.
-                            The tents are all spacious, with king or twin beds and elegant en suite bathrooms. There is
-                            a main lounge,
-                            bar and dining area, all exquisitely built with natural materials and thatched roofs. The
-                            Private House
-                            and Family Tent are located slightly separate to the main camp, upon the hill where they
-                            share a pool.
+                            'title' => 'Sweet Waters Camp',
+                            'desc' => 'Sweetwaters Camp location within the Ol Pejeta Conservancy
+                            enables you to take part in everything from game drives and lion tracking to scenic bird
+                            walks along the
+                            river. These spacious tents combine the traditional ambiance of a safari camp with the
+                            comforts of home.
                             ',
-                            'image' => 'elewana.webp',
-                            'price' => 330,
+                            'image' => 'sweet_waters.webp',
+                            'price' => 500,
                             'currency' => 'USD',
                             ],
 
                             [
-                            'title' => 'Rekero Camp',
-                            'desc' => 'Intimate safari experience by the Talek River.',
-                            'image' => 'rekero.webp',
+                            'title' => 'The River Camp',
+                            'desc' => 'The River Camp is a luxurious safari retreat located within
+                            Kenya\'s Ol Pejeta Conservancy, nestled along the serene Ngobit River. The camp offers six
+                            double ensuite
+                            guest tents and two family suites, accommodating up to 20 guests, ensuring an intimate and
+                            exclusive
+                            experience. Each tent features private decks with views of the river, as well as indoor and
+                            outdoor
+                            showers. ',
+                            'image' => 'river_camp.webp',
                             'price' => 400,
                             'currency' => 'USD',
                             ],
 
                             [
-                            'title' => 'Ol Tukai Lodge',
-                            'desc' => 'Situated in the heart of Amboseli National Park, Ol Tukai Lodge offers stunning
-                            views of Mount
-                            Kilimanjaro and is considered one of the best spots in the world to watch elephants in their
-                            natural
-                            habitat. The lodge features elegant chalet-style rooms, fine dining, a pool, and
-                            nature-inspired wellness
-                            experiences.',
-                            'image' => 'oltukai.webp',
-                            'price' => 00,
+                            'title' => 'Ol Pejeta Bush Camp',
+                            'desc' => 'With only 8 tents, that are spacious and comfortable canvas
+                            tents along the Ewaso Ngiro River, where elephants are frequently seen from camp, you can
+                            relax and take
+                            in the iconic landscapes and stunning backdrop views of Mount Kenya while observing the
+                            rarest African
+                            wildlife. Additionally, you can enjoy superb general game viewing and get involved in
+                            activities such as
+                            canine training or recording lion sightings for the research team.',
+                            'image' => 'bush_camp.webp',
+                            'price' => 500,
                             'currency' => 'USD',
                             ],
 
-                            [
-                            'title' => 'Kibo Safari Camp',
-                            'desc' => 'Kibo Safari Camp is a tented camp located at the foot of Mt. Kilimanjaro, just
-                            outside the
-                            Amboseli National Park gate. Each tent is self-contained with a rustic yet comfortable feel,
-                            offering a
-                            perfect blend of adventure and relaxation. Guests enjoy bush dinners, Maasai dance, and game
-                            drives with
-                            expert guides.',
-                            'image' => 'kibo.webp',
-                            'price' => 00,
-                            'currency' => 'USD',
-                            ],
-
-                            [
-                            'title' => 'Angama Amboseli',
-                            'desc' => 'Located in the private Kimana Sanctuary, Angama Amboseli offers a luxurious and
-                            intimate safari
-                            experience. With uninterrupted views of Kilimanjaro and rich wildlife sightings, this newly
-                            opened camp
-                            provides modern elegance, personalized service, and a strong conservation focus. Ideal for
-                            honeymooners
-                            and luxury travelers.',
-                            'image' => 'angama_ambo.webp',
-                            'price' => 00,
-                            'currency' => 'USD',
-                            ],
                             ];
                             $chunks = array_chunk($destinations, 4); // 2x2 layout = 4 cards per scroll "page"
                             @endphp
