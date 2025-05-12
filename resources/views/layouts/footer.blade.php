@@ -86,7 +86,7 @@
                         <div class="widget">
                             <h3 class="heading">Contact</h3>
                             <ul class="list-unstyled quick-info links">
-                                <li class="email"><a href="#">plutocratstravel@gmail.com</a></li>
+                                <li class="email"><a href="#">info@plutocratstravels.com</a></li>
                                 <li class="phone"><a href="#">+254 737 444066</a></li>
                                 <!-- <li class="address"><a href="#">address 0000000</a></li> -->
                             </ul>

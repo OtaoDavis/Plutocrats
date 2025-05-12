@@ -16,6 +16,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/owl.carousel.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/owl.theme.default.min.css') }}">
@@ -56,7 +57,7 @@
                     @foreach ([
                     [
                     'location' => 'Maasai Mara',
-                    'title' => '4 NIGHTS/5 DAYS SAFARIS – NAIROBI & MARA COMBINATION',
+                    'title' => '4 NIGHTS/5 DAYS SAFARIS – NAIROBI & MARA COMBO',
                     'desc' => 'A full week of adventure with luxury stays.',
                     'image' => 'kicheche.webp',
                     'price' => 5,
@@ -92,91 +93,121 @@
                     ],
                     [
                     'location' => 'Maasai Mara',
-                    'title' => '5-Day Game Drive',
-                    'desc' => 'Enjoy thrilling game drives across the Mara.',
+                    'title' => '5-Day Game Drive Adventure',
+                    'desc' => 'Explore the wild side of the Mara with thrilling daily game drives.',
                     'image' => 'game_drive.webp',
-                    'price' => 180000,
+                    'price' => 98000,
                     'currency' => 'KES',
-                    'details' => 'To be added',
+                    'details' => '
+                    <p><strong>Overview:</strong> Experience the Mara’s rich wildlife over 5 days. Ideal for adventurers
+                        seeking full immersion in nature.</p>
+                    <p><strong>Includes:</strong> Accommodation, meals, park entry, and two daily game drives.</p>
+                    ',
                     ],
                     [
                     'location' => 'Maasai Mara',
                     'title' => '3-Day Budget Safari',
-                    'desc' => 'Affordable and exciting short safari experience.',
+                    'desc' => 'Exciting short getaway that won’t break the bank.',
                     'image' => 'budget.png',
-                    'price' => 90000,
+                    'price' => 42000,
                     'currency' => 'KES',
-                    'details' => 'To be added',
+                    'details' => '
+                    <p><strong>Highlights:</strong> Affordable shared transport and basic tented camps with essential
+                        amenities.<br>
+                        Includes all meals and two game drives.</p>
+                    ',
                     ],
                     [
                     'location' => 'Maasai Mara',
                     'title' => 'Hot Air Balloon Safari',
-                    'desc' => 'Experience the Mara from above at sunrise.',
+                    'desc' => 'Watch the sunrise over the Mara from a hot air balloon.',
                     'image' => 'balloon.jpg',
-                    'price' => 150000,
+                    'price' => 58000,
                     'currency' => 'KES',
-                    'details' => 'To be added',
+                    'details' => '
+                    <p><strong>Experience:</strong> 1-hour flight at dawn followed by a champagne breakfast in the
+                        bush.<br>
+                        Includes transport from camp to launch site and back.</p>
+                    ',
                     ],
                     [
                     'location' => 'Maasai Mara',
                     'title' => 'Exclusive Charter Safari',
-                    'desc' => 'Private charter flights for a VIP safari.',
+                    'desc' => 'Private charter flights, top-tier guides, and luxury camps.',
                     'image' => 'charter2.webp',
-                    'price' => 500000,
+                    'price' => 350000,
                     'currency' => 'KES',
-                    'details' => 'To be added',
+                    'details' => '
+                    <p><strong>For VIPs:</strong> Includes charter flights, private game drives, personal chef, and
+                        five-star accommodation.</p>
+                    ',
                     ],
                     [
                     'location' => 'Maasai Mara',
                     'title' => 'Big Five Expedition',
-                    'desc' => 'Track the legendary Big Five in their natural habitat.',
+                    'desc' => 'Track lions, elephants, buffalo, rhinos, and leopards in action.',
                     'image' => 'big-five.webp',
-                    'price' => 200000,
+                    'price' => 110000,
                     'currency' => 'KES',
-                    'details' => 'To be added',
+                    'details' => '
+                    <p><strong>Itinerary:</strong> 4-day guided experience focusing on the Big Five sightings. Includes
+                        night drives and expert-led tracking tours.</p>
+                    ',
                     ],
                     [
                     'location' => 'Maasai Mara',
                     'title' => 'Family Safari',
-                    'desc' => 'Tailored packages for a fun family adventure.',
+                    'desc' => 'A family-friendly adventure with safe, fun activities.',
                     'image' => 'hiking.webp',
-                    'price' => 160000,
+                    'price' => 88000,
                     'currency' => 'KES',
-                    'details' => 'To be added',
+                    'details' => '
+                    <p><strong>Perfect for all ages:</strong> Activities include nature walks, storytelling by the
+                        campfire, and junior ranger programs. Family tents available.</p>
+                    ',
                     ],
                     [
                     'location' => 'Maasai Mara',
                     'title' => 'Photography Tour',
-                    'desc' => 'Perfect for wildlife photographers and nature lovers.',
+                    'desc' => 'Guided by a professional photographer to capture the perfect shot.',
                     'image' => 'photography.jpg',
-                    'price' => 175000,
+                    'price' => 120000,
                     'currency' => 'KES',
-                    'details' => 'To be added',
+                    'details' => '
+                    <p><strong>For photography lovers:</strong> Dawn and dusk game drives with positioning optimized for
+                        lighting. Instruction sessions available.</p>
+                    ',
                     ],
                     [
                     'location' => 'Maasai Mara',
                     'title' => 'Honeymoon Safari',
-                    'desc' => 'Romantic getaway amidst the beauty of the Mara.',
+                    'desc' => 'Celebrate love with luxury, privacy, and breathtaking views.',
                     'image' => 'romance.jpg',
-                    'price' => 220000,
+                    'price' => 135000,
                     'currency' => 'KES',
-                    'details' => 'To be added',
+                    'details' => '
+                    <p><strong>Romantic touches:</strong> Private bush dinners, rose petal turndowns, couples’ spa
+                        treatments, and sunset game drives.</p>
+                    ',
                     ],
                     ] as $package)
                     <div class="package-card" data-bs-toggle="modal" data-bs-target="#bookingModal"
                         data-title="{{ $package['title'] }}" data-desc="{{ $package['desc'] }}"
                         data-image-name="{{ $package['image'] }}" data-price="{{ $package['price'] }}"
+                        data-details="{!! $package['details'] !!}"
                         style="background-image: url('{{ asset('images/' . $package['image']) }}');">
                         <div class="overlay">
                             <h3>{{ $package['title'] }}</h3>
                             <p>{{ $package['desc'] }}</p>
                             <span class="book-text" data-bs-toggle="modal" data-bs-target="#bookingModal"
                                 data-title="{{ $package['title'] }}" data-desc="{{ $package['desc'] }}"
-                                data-image-name="{{ $package['image'] }}" data-price="{{ $package['price'] }}">
+                                data-image-name="{{ $package['image'] }}" data-price="{{ $package['price'] }}"
+                                data-details="{!! $package['details'] !!}">
                                 View Details
                             </span>
                         </div>
                     </div>
+
                     @endforeach
                 </div>
 
@@ -194,17 +225,12 @@
                         <h5 class="modal-title" id="bookingModalLabel">Package Details</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                    <div class="modal-body row">
-                        <div class="col-md-6">
-                            <img id="modalImage" src="" class="img-fluid rounded mb-3" alt="Package Image">
-                        </div>
-                        <div class="col-md-6">
-                            <h4 id="modalTitle"></h4>
-                            <p id="modalDesc"></p>
-                            <p><strong>Price:</strong> Kshs. <span id="modalPrice"></span></p>
-                            <div id="modalDetails"></div>
-                            <a id="modalBookBtn" href="#" class="btn btn-primary mt-3 w-100">Proceed to Booking</a>
-                        </div>
+                    <div class="modal-body">
+                        <!-- <img id="modalImage" src="" class="img-fluid rounded mb-3 w-50" alt="Package Image"> -->
+                        <h4 id="modalTitle" class="mb-3"></h4>
+                        <p><strong>Price:</strong> Kshs. <span id="modalPrice"></span></p>
+                        <div id="modalDetails"></div>
+                        <a id="modalBookBtn" href="#" class="btn btn-primary mt-3 w-100">Proceed to Booking</a>
                     </div>
                 </div>
             </div>
@@ -227,7 +253,7 @@
                             @php
                             $destinations = [
                             [
-                            'name' => 'Angama Mara',
+                            'title' => 'Angama Mara',
                             'desc' => 'Perched on the edge of the Great Rift Valley, this lodge provides
                             breathtaking vistas of the Maasai Mara.',
                             'image' => 'angama.webp',
@@ -236,7 +262,7 @@
                             ],
 
                             [
-                            'name' => 'Mara Bushtops',
+                            'title' => 'Mara Bushtops',
                             'desc' => 'A luxury safari camp offering panoramic views and exceptional
                             service',
                             'image' => 'mara_bush.webp',
@@ -245,7 +271,7 @@
                             ],
 
                             [
-                            'name' => 'Olare Mara',
+                            'title' => 'Olare Mara',
                             'desc' => 'A high-end camp located in the Olare Motorogi Conservancy, known for
                             its rich wildlife.',
                             'image' => 'olare.webp',
@@ -254,7 +280,7 @@
                             ],
 
                             [
-                            'name' => 'Rekero Camp',
+                            'title' => 'Rekero Camp',
                             'desc' => 'Situated in the heart of the Maasai Mara, offering authentic safari
                             experiences.',
                             'image' => 'rekero.webp',
@@ -269,15 +295,16 @@
                             <div class="grid-page d-flex flex-wrap me-4" style="width: 520px;">
                                 @foreach ($chunk as $destination)
                                 <div class="location-card m-2 flex-shrink-0" onclick="showDetails(
-                      '{{ $destination['name'] }}',
-                      `{{ addslashes($destination['desc']) }}`,
-                      '{{ asset('images/' . $destination['image']) }}',
-                      '{{ number_format($destination['price']) }}'
-                    )" style="width: 240px; height: 260px; cursor: pointer;">
+                                        '{{ $destination['title'] }}',
+                                        `{{ addslashes($destination['desc']) }}`,
+                                        '{{ asset('images/' . $destination['image']) }}',
+                                        '{{ number_format($destination['price']) }}',
+                                        '{{ $destination['currency'] }}'
+                                    )" style="width: 240px; height: 260px; cursor: pointer;">
                                     <img src="{{ asset('images/' . $destination['image']) }}"
-                                        alt="{{ $destination['name'] }}" class="img-fluid rounded mb-2"
+                                        alt="{{ $destination['title'] }}" class="img-fluid rounded mb-2"
                                         style="height: 150px; object-fit: cover;">
-                                    <h5 class="text-center mb-1">{{ $destination['name'] }}</h5>
+                                    <h5 class="text-center mb-1">{{ $destination['title'] }}</h5>
                                 </div>
                                 @endforeach
                             </div>
@@ -292,15 +319,41 @@
                 <!-- Right Side: Dynamic Detail Display -->
                 <div class="col-md-6">
                     <div class="location-details text-center mt-4 mt-md-0">
-                        <img id="location-image" src="{{ asset('images/angama.webp') }}" alt="Location"
-                            class="img-fluid rounded mb-3" style="height: 250px; object-fit: cover;" />
-                        <h3 id="location-title">Angama Mara</h3>
-                        <p id="location-desc" class="px-4">Perched on the edge of the Great Rift Valley, this
-                            lodge provides
-                            breathtaking vistas of the Maasai Mara.</p>
-                        <p id="location-price" class="fw-bold mt-2">
-                            Price ranging from <strong>$00</strong> per person depending on month of travel
+                        <img id="location-image"
+                            src="{{ asset('images/' . ($destinations[0]['image'] ?? 'placeholder.jpg')) }}"
+                            alt="{{ $destinations[0]['title'] ?? 'Location' }}" class="img-fluid rounded mb-3"
+                            style="height: 250px; object-fit: cover;" />
+                        <h3 id="location-title">{{ $destinations[0]['title'] ?? 'Select a Location' }}</h3>
+                        <p id="location-desc" class="px-4">{{ $destinations[0]['desc'] ?? 'Details will appear here.' }}
                         </p>
+                        @php
+                        $currencySymbols = [
+                        'KES' => 'Kshs',
+                        'USD' => '$',
+                        'EUR' => '€',
+                        'GBP' => '£',
+                        ];
+
+                        $currency = $destinations[0]['currency'] ?? 'KES'; // Default to KES
+                        $symbol = $currencySymbols[$currency] ?? $currency; // Fallback to code if symbol not found
+                        @endphp
+
+                        <p id="location-price" class="fw-bold mt-2">
+                            Price ranging from <strong>{{ $symbol }} {{ number_format($destinations[0]['price'] ?? 0)
+                                }}</strong> per
+                            person depending on month of travel
+                        </p>
+
+                        <a id="bookNowBtn" href="{{ route('booking.destination.form', [
+                                    'location' => $destination['title'],
+                                    'title' => $destination['title'],
+                                    'image' => asset('images/' . $destination['image']),
+                                    'price' => $destination['price'],
+                                    'desc' => addslashes($destination['desc']),
+                                    'currency' => $destination['currency']
+                                ]) }}" class="btn btn-primary custom-book-button mt-3">
+                            Book Now
+                        </a>
                     </div>
                 </div>
             </div>
@@ -357,17 +410,15 @@
         bookingModal.addEventListener('show.bs.modal', function (event) {
             const button = event.relatedTarget;
 
-            const title = button.getAttribute('data-title');
-            const desc = button.getAttribute('data-desc');
-            const imageName = button.getAttribute('data-image-name');
-            const price = button.getAttribute('data-price');
-            const details = button.getAttribute('data-details');
+            const title = button.getAttribute('data-title') || '';
+            const imageName = button.getAttribute('data-image-name') || '';
+            const price = button.getAttribute('data-price') || '';
+            const details = button.getAttribute('data-details') || '';
 
             const imagePath = `/images/${imageName}`;
 
             bookingModal.querySelector('#modalTitle').textContent = title;
-            bookingModal.querySelector('#modalDesc').textContent = desc;
-            bookingModal.querySelector('#modalImage').src = imagePath;
+            // bookingModal.querySelector('#modalImage').src = imagePath;
             bookingModal.querySelector('#modalPrice').textContent = price;
             bookingModal.querySelector('#modalDetails').innerHTML = details;
 
@@ -377,13 +428,62 @@
             bookingModal.querySelector('#modalBookBtn').href = bookingUrl;
         });
 
-        function showDetails(name, desc, image, price) {
-            document.getElementById('location-title').textContent = name;
+        function showDetails(title, desc, image, price, currency) {
+            console.log("showDetails called with image:", image, "and currency:", currency);
+            const locationImage = document.getElementById('location-image');
+            locationImage.style.display = 'block';
+            locationImage.style.opacity = 1;
+            locationImage.src = image;
+            console.log("Image src set to:", locationImage.src);
+            document.getElementById('location-title').textContent = title;
             document.getElementById('location-desc').textContent = desc;
-            document.getElementById('location-image').src = image;
+            const currencySymbols = {
+                KES: 'Kshs',
+                USD: '$',
+                EUR: '€',
+                GBP: '£'
+            };
+            const formattedPrice = new Intl.NumberFormat().format(price);
+            const symbol = currencySymbols[currency] || currency; 
             document.getElementById('location-price').innerHTML =
-                `Price ranging from <strong>$${price}</strong> per person depending on month of travel`;
+                `Price ranging from <strong>${symbol} ${formattedPrice}</strong> per person depending on month of travel`;
+
+            // Update the href of the "Book Now" button
+            const bookNowBtn = document.getElementById('bookNowBtn');
+            if (bookNowBtn) {
+                bookNowBtn.href = `/book-destination?location=${encodeURIComponent(title)}&title=${encodeURIComponent(title)}&image=${encodeURIComponent(image.split('/').pop())}&price=${encodeURIComponent(price)}&desc=${encodeURIComponent(desc)}&currency=${encodeURIComponent(currency)}`;
+            }
         }
+
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const firstDestination = @json($destinations[0] ?? null);
+            if (firstDestination) {
+                showDetails(
+                    firstDestination.title,
+                    firstDestination.desc,
+                    '{{ asset('images / ') }}/' + destination[index].image,
+                    firstDestination.price
+                );
+            }
+
+            // Add event listeners to the small location cards to call showDetails
+            const locationCards = document.querySelectorAll('.location-card');
+            locationCards.forEach((card, index) => {
+                card.addEventListener('click', () => {
+                    const destination = @json($destinations);
+                    if (destination[index]) {
+                        showDetails(
+                            destination[index].title,
+                            destination[index].desc,
+                            '{{ asset('images / ') }}/' + destination[index].image,
+                            destination[index].price
+                        );
+                    }
+                });
+            });
+        });
+
 
         function scrollGrid(direction) {
             const grid = document.getElementById('locationsGrid');

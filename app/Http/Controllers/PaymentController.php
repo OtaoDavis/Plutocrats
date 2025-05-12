@@ -196,6 +196,70 @@ class PaymentController extends Controller
         }
     }
 
+    // Add this method to your PaymentController
+    public function handleWebhook(Request $request)
+    {
+        Log::info('Webhook received from IntaSend.', ['payload' => $request->all()]);
+    
+        // Validate webhook signature if IntaSend provides one (security best practice)
+    
+        $trackingId = $request->input('tracking_id');
+        $invoiceId = $request->input('invoice_id');
+        $state = $request->input('state');
+        $amount = $request->input('amount');
+        $currency = $request->input('currency');
+        $reference = $request->input('reference'); // If available
+    
+        if (!$invoiceId || !$state || !$amount || !$currency) {
+            Log::warning('Webhook missing required parameters.', $request->all());
+            return response()->json(['message' => 'Invalid payload'], 400);
+        }
+    
+        // Find the booking based on invoice ID or reference (you can modify depending on your system)
+        $booking = Booking::where('transaction_ref', $invoiceId)->first();
+    
+        if (!$booking) {
+            // Optionally: if you stored the booking id in metadata (e.g. in 'reference' field)
+            if (strpos($reference, 'booking_') !== false) {
+                $bookingId = str_replace('booking_', '', $reference);
+                $booking = Booking::find($bookingId);
+            }
+        }
+    
+        if (!$booking) {
+            Log::error('Webhook: Booking not found.', ['invoice_id' => $invoiceId, 'reference' => $reference]);
+            return response()->json(['message' => 'Booking not found'], 404);
+        }
+    
+        // Update based on payment state
+        if (strtoupper($state) === 'COMPLETE') {
+            $booking->update([
+                'status' => 'paid',
+                'transaction_ref' => $invoiceId,
+            ]);
+        
+            Payment::firstOrCreate([
+                'booking_id' => $booking->id,
+                'reference' => $invoiceId,
+            ], [
+                'user_id' => $booking->user_id,
+                'amount' => $amount,
+                'currency' => $currency,
+                'status' => 'paid',
+            ]);
+        
+            Log::info('Payment completed via webhook for booking ID: ' . $booking->id);
+        } elseif (in_array(strtoupper($state), ['FAILED', 'CANCELLED'])) {
+            $booking->update([
+                'status' => 'failed',
+            ]);
+            Log::warning('Payment failed or cancelled for booking ID: ' . $booking->id);
+        }
+    
+        return response()->json(['message' => 'Webhook handled'], 200);
+    }
+
+
     /**
      * Handles the callback from IntaSend after a payment attempt.
      */

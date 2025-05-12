@@ -1452,17 +1452,6 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
   background: #b48f20;
 }
 
-.btn-book-today {
-  background-color: #ffffff;
-  color: #1A374D;
-  border: 2px solid #1A374D;
-  padding: 8px 20px;
-  border-radius: 10px;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  text-decoration: none;
-}
-
 .btn-book-today:hover {
   background-color: #1A374D;
   color: #ffffff;

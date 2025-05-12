@@ -63,6 +63,43 @@
                         rich cultural immersions in the Maasai Mara.
                     </p>
                     <p><strong>From Ksh <span id="price">2,500</span> per person sharing*</strong></p>
+                    <div class="text-center mt-4">
+                        <a href="{{ route('booking.package.form', [
+                                'title' => '4 NIGHTS/5 DAYS SAFARIS – NAIROBI & MARA COMBINATION',
+                                'image' => 'nai.webp',
+                                'price' => '5',
+                                'currency' => 'KES',
+                                'desc' =>
+                                    'This classic safari blends the urban charm of Nairobi with the untamed wilderness of the Masai Mara. Stay in top-tier accommodations in Nairobi before heading out for game drives, a hot air balloon experience, and rich cultural immersions in the Maasai Mara.',
+                                'details' => '
+                                                <p><strong>Day 1: Nairobi</strong><br>
+                                                Accommodation: Karen Blixen Cottages or Radisson Blu or Crowne Plaza.<br>
+                                                Meals: Dinner, Breakfast</p>
+                                                <p><strong>Days 2-5: Masai Mara Game Reserve Safari</strong><br>
+                                                Transportation: Road or flight, based on preference.<br>
+                                                Accommodation: Olengoti Safari Camp.<br>
+                                                Meals: Lunch, Dinner, Breakfast.<br>
+                                                Experiences: Game drives, Hot Air Balloon Safari, Cultural visits, Nature Walks.<br>
+                                                Rate: From Kshs. 2,500 per person sharing, depending on month of travel.</p>
+                                                <p><strong>Cost Includes:</strong><br>
+                                                • Transport in a customized safari van/4×4 land cruiser for game viewing.<br>
+                                                • Airport pick-up and drop-off.<br>
+                                                • Accommodation as per the itinerary.<br>
+                                                • All meals while on safari.<br>
+                                                • Services of our professional and knowledgeable driver-guide.<br>
+                                                • All park entrance fees.<br>
+                                                • All game drives.<br>
+                                                • Statutory taxes.<br>
+                                                • Balloon safari.<br>
+                                                • Maasai Village visit.</p>
+                                                <p><strong>Not Included:</strong><br>
+                                                • Personal insurance.<br>
+                                                • Items of personal nature.<br>
+                                                • Alcoholic & soft drinks.<br>
+                                                • Visa fees.<br>
+                                                • Tips.</p>',
+                            ]) }}" class="btn-book-today btn-lg">Book Now</a>
+                    </div>
                 </div>
 
                 <div class="col-md-6">
@@ -183,43 +220,6 @@
                     </div>
                 </div>
             </div>
-            <div class="text-center mt-3">
-                <a href="{{ route('booking.package.form', [
-                        'title' => '4 NIGHTS/5 DAYS SAFARIS – NAIROBI & MARA COMBINATION',
-                        'image' => 'nai.webp',
-                        'price' => '5',
-                        'currency' => 'KES',
-                        'desc' =>
-                            'This classic safari blends the urban charm of Nairobi with the untamed wilderness of the Masai Mara. Stay in top-tier accommodations in Nairobi before heading out for game drives, a hot air balloon experience, and rich cultural immersions in the Maasai Mara.',
-                        'details' => '
-                                        <p><strong>Day 1: Nairobi</strong><br>
-                                        Accommodation: Karen Blixen Cottages or Radisson Blu or Crowne Plaza.<br>
-                                        Meals: Dinner, Breakfast</p>
-                                        <p><strong>Days 2-5: Masai Mara Game Reserve Safari</strong><br>
-                                        Transportation: Road or flight, based on preference.<br>
-                                        Accommodation: Olengoti Safari Camp.<br>
-                                        Meals: Lunch, Dinner, Breakfast.<br>
-                                        Experiences: Game drives, Hot Air Balloon Safari, Cultural visits, Nature Walks.<br>
-                                        Rate: From Kshs. 2,500 per person sharing, depending on month of travel.</p>
-                                        <p><strong>Cost Includes:</strong><br>
-                                        • Transport in a customized safari van/4×4 land cruiser for game viewing.<br>
-                                        • Airport pick-up and drop-off.<br>
-                                        • Accommodation as per the itinerary.<br>
-                                        • All meals while on safari.<br>
-                                        • Services of our professional and knowledgeable driver-guide.<br>
-                                        • All park entrance fees.<br>
-                                        • All game drives.<br>
-                                        • Statutory taxes.<br>
-                                        • Balloon safari.<br>
-                                        • Maasai Village visit.</p>
-                                        <p><strong>Not Included:</strong><br>
-                                        • Personal insurance.<br>
-                                        • Items of personal nature.<br>
-                                        • Alcoholic & soft drinks.<br>
-                                        • Visa fees.<br>
-                                        • Tips.</p>',
-                    ]) }}" class="btn-book-today btn-lg">Book Now</a>
-            </div>
         </div>
     </section>
 
@@ -252,6 +252,21 @@
                         journey.
                     </p>
                     <p><strong>From Ksh <span id="price">6,500</span> per person sharing*</strong></p>
+                    <div class="text-center mt-4">
+                        <a href="{{ route('booking.package.form',[
+                                'title' => '7 NIGHTS FLYING SAFARI – FINCH HATTONS & MAHALI MZURI',
+                                'image' => 'fh-1.webp',
+                                'price' => '6500',
+                                'currency' => 'KES',
+                                'desc' => 'The ultimate Out of Africa safari experience',
+                                'details' => '
+                                                <p><strong>3 Nights - Finch Hattons, Tsavo West</strong><br>
+                                                </p>
+                                                <p><strong>4 Nights - Mahali Mzuri, Maasai Mara</strong><br>
+                                                </p>
+                                                    ',
+                            ]) }}" class="btn-book-today btn-lg">Book Now</a>
+                    </div>
                 </div>
 
                 <div class="col-md-6">
@@ -366,21 +381,6 @@
                         </span>
                     </div>
                 </div>
-            </div>
-            <div class="text-center mt-3">
-                <a href="{{ route('booking.package.form',[
-                        'title' => '7 NIGHTS FLYING SAFARI – FINCH HATTONS & MAHALI MZURI',
-                        'image' => 'fh-1.webp',
-                        'price' => '6500',
-                        'currency' => 'KES',
-                        'desc' => 'The ultimate Out of Africa safari experience',
-                        'details' => '
-                                        <p><strong>3 Nights - Finch Hattons, Tsavo West</strong><br>
-                                        </p>
-                                        <p><strong>4 Nights - Mahali Mzuri, Maasai Mara</strong><br>
-                                        </p>
-                                            ',
-                    ]) }}" class="btn-book-today btn-lg">Book Now</a>
             </div>
         </div>
     </section>
@@ -780,6 +780,10 @@
                 });
             });
         </script>
+        <script src="{{ asset('js/jquery-3.4.1.min.js') }}"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"></script>
 </body>
 
 </html>

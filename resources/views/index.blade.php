@@ -400,7 +400,10 @@
 		</div>
 	</div>
 
-	<script src="js/jquery-3.4.1.min.js"></script>
+	<script src="{{ asset('js/jquery-3.4.1.min.js') }}"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+		crossorigin="anonymous"></script>
 	<script src="js/popper.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/owl.carousel.min.js"></script>
@@ -447,7 +450,7 @@
 			const form = document.querySelector('.form');
 
 			form.addEventListener('submit', function (event) {
-				event.preventDefault(); // Prevent the default form submission
+				event.preventDefault();
 
 				if (destinationSelect.value === '') {
 					alert('Please choose a destination.');
@@ -468,11 +471,8 @@
 					case 'olpejeta':
 						redirectRoute = '{{ route('olpejeta') }}';
 						break;
-					// Add cases for other specific destinations if you create routes for them
 					default:
-						// Handle the 'etc' or any unhandled destination - maybe redirect to a general locations page
-						redirectRoute = '/home'; // Example fallback
-						break;
+						redirectRoute = '/';
 				}
 
 				if (redirectRoute) {

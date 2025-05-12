@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="author" content="Untree.co">
     <link rel="shortcut icon" href="{{ asset('favicon.png') }}">
-    <meta name="description" content="Explore the Maasai Mara Safari Packages" />
-    <meta name="keywords" content="Maasai Mara, Safari, Tours" />
+    <meta name="description" content="Discover the wonders of Samburu National Reserve, Kenya" />
+    <meta name="keywords" content="Samburu, Safari, Kenya, Wildlife, Culture" />
 
     <link rel="icon" href="{{ asset('images/ico_head.svg') }}" type="image/svg+xml">
 
@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="{{ asset('css/owl.theme.default.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/locations.css') }}">
 
-    <title>Ol Pejeta Safari Packages</title>
+    <title>Samburu National Reserve Safaris</title>
 </head>
 
 <body>
@@ -31,35 +31,31 @@
     <section class="hero">
         <div class="owl-carousel owl-theme hero-slider">
             <div class="slide">
-                <img src="/images/pej-1.webp" alt="Slide 1">
+                <img src="/images/samburu_1.webp" alt="Samburu Landscape">
             </div>
             <div class="slide">
-                <img src="{{ asset('images/pej-2.webp') }}" alt="Slide 2">
+                <img src="{{ asset('images/samburu_2.webp') }}" alt="Samburu Elephants">
             </div>
             <div class="slide">
-                <img src="{{ asset('images/pej-3.webp') }}" alt="Slide 4">
+                <img src="{{ asset('images/samburu_3.webp') }}" alt="Samburu Wildlife">
             </div>
         </div>
         <div class="hero-text">
-            <h1>Explore Ol Pejeta</h1>
-            <p>Venture into Ol Pejeta Conservancy, a unique blend of safari adventure and cutting-edge conservation.
-                Nestled
-                between the foothills of the Aberdares and Mount Kenya, Ol Pejeta is home to the Big Five and the
-                last two
-                remaining northern white rhinos on the planet. Experience thrilling game drives, visit the
-                chimpanzee sanctuary,
-                and witness impactful conservation efforts in one of Kenya’s most remarkable wildlife destinations.
+            <h1>Explore Samburu National Reserve</h1>
+            <p>
+                Embark on an unforgettable journey to Samburu National Reserve, a land of dramatic landscapes and
+                unique wildlife. Located north of the equator, Samburu is renowned for its arid beauty, the Ewaso Nyiro
+                River snaking through it, and the special five: Grevy's zebra, Somali ostrich, reticulated giraffe,
+                Beisa oryx, and the long-necked gerenuk. Discover a rich cultural heritage and thrilling wildlife
+                encounters in this captivating Kenyan destination.
             </p>
-
-
         </div>
     </section>
 
 
-    <!-- Packages Section -->
     <section class="packages">
         <div class="container">
-            <h2 class="locations-title text-center">Safari Packages</h2>
+            <h2 class="locations-title text-center">Samburu Safari Packages</h2>
             <div class="packages-wrapper">
                 <button class="scroll-btn-left" aria-label="Scroll Left">
                     <i class="fa-solid fa-arrow-left"></i>
@@ -67,114 +63,84 @@
 
                 <div class="packages-scroll">
                     @foreach ([
-                    [
-                    'title' => 'Chimpanzee Sanctuary Tour',
-                    'desc' => 'Meet rescued chimpanzees in their natural habitat.',
-                    'image' => 'chimpanzee.jpeg',
-                    'price' => 120000,
-                    'details' => '
-                    - Visit the Sweetwaters Chimpanzee Sanctuary<br>
-                    - Guided educational walk<br>
-                    - Learn about individual chimpanzee stories<br>
-                    - Ideal for families and conservation enthusiasts
-                    ',
-                    ],
-                    [
-                    'title' => '3-Day Rhino Tracking Safari',
-                    'desc' => 'Track endangered rhinos with expert guides.',
-                    'image' => 'rhino_tracking.webp',
-                    'price' => 160000,
-                    'details' => '
-                    - Three days of guided rhino tracking<br>
-                    - Stay at eco-friendly camps<br>
-                    - Learn from rangers about rhino conservation<br>
-                    - Includes park fees and all meals
-                    ',
-                    ],
-                    [
-                    'title' => 'Night Game Drive',
-                    'desc' => 'Witness nocturnal wildlife in action.',
-                    'image' => 'night_drive.jpg',
-                    'price' => 100000,
-                    'details' => '
-                    - After-dark safari in a 4x4 with spotlighting<br>
-                    - Chance to see lions, hyenas, aardvarks, and more<br>
-                    - Accompanied by experienced tracker<br>
-                    - Includes snacks and drinks
-                    ',
-                    ],
-                    [
-                    'title' => 'Conservation Experience Safari',
-                    'desc' => 'Participate in wildlife conservation efforts.',
-                    'image' => 'ts-3.webp',
-                    'price' => 140000,
-                    'details' => '
-                    - Get hands-on with conservation projects<br>
-                    - Help monitor wildlife using GPS and camera traps<br>
-                    - Exclusive behind-the-scenes access<br>
-                    - Stay in researcher-style camps
-                    ',
-                    ],
-                    [
-                    'title' => 'Birdwatching Safari',
-                    'desc' => 'Explore Ol Pejeta’s diverse bird species.',
-                    'image' => 'birdwatching.jpg',
-                    'price' => 110000,
-                    'details' => '
-                    - Guided walks and drives focused on bird species<br>
-                    - Spot over 300 bird species<br>
-                    - Includes bird checklist and binoculars<br>
-                    - Great for amateur and professional birders
-                    ',
-                    ],
-                    [
-                    'title' => 'Ol Pejeta Explorer Package',
-                    'desc' => 'Comprehensive tour including all major highlights.',
-                    'image' => 'game_drive2.webp',
-                    'price' => 190000,
-                    'details' => '
-                    - 4-day all-inclusive safari<br>
-                    - Visit Chimpanzee Sanctuary, Big Five game drives<br>
-                    - Accommodation in mid-range lodges<br>
-                    - Cultural visit to local communities
-                    ',
-                    ],
-                    [
-                    'title' => 'Family Safari at Ol Pejeta',
-                    'desc' => 'Fun and educational safari tailored for families.',
-                    'image' => 'family_safari.jpg',
-                    'price' => 150000,
-                    'details' => '
-                    - Kid-friendly activities and nature walks<br>
-                    - Guided game drives for all ages<br>
-                    - Family-style accommodation<br>
-                    - Optional bushcraft lessons for kids
-                    ',
-                    ],
-                    [
-                    'title' => 'Honeymoon Getaway',
-                    'desc' => 'Romantic safari escape with luxurious accommodations.',
-                    'image' => 'olare.webp',
-                    'price' => 210000,
-                    'details' => '
-                    - Private game drives<br>
-                    - Candlelit bush dinners<br>
-                    - Luxury tented camps with stunning views<br>
-                    - Welcome champagne and massages
-                    ',
-                    ],
-                    [
-                    'title' => 'Photographic Safari',
-                    'desc' => 'Capture unforgettable wildlife moments.',
-                    'image' => 'maasai-mara.jpg',
-                    'price' => 170000,
-                    'details' => '
-                    - Guided by professional wildlife photographer<br>
-                    - Early morning and golden hour drives<br>
-                    - Stop-friendly drive pacing for great shots<br>
-                    - Ideal for DSLR and mobile photographers
-                    ',
-                    ],
+                        [
+                            'title' => 'Samburu Highlights Safari (3 Days)',
+                            'desc' => 'Experience the best of Samburu in a short getaway.',
+                            'image' => 'samburu_highlights.webp',
+                            'price' => 150000,
+                            'details' => '
+                                - Guided game drives to see the Special Five<br>
+                                - Accommodation in comfortable lodges/camps<br>
+                                - Explore the scenic landscapes of Samburu<br>
+                                - Opportunities for cultural visits<br>
+                                - All meals included
+                            ',
+                        ],
+                        [
+                            'title' => 'Samburu Cultural & Wildlife Expedition (5 Days)',
+                            'desc' => 'Immerse yourself in the culture and wildlife of Samburu.',
+                            'image' => 'samburu_2.webp',
+                            'price' => 220000,
+                            'details' => '
+                                - Extensive game drives and wildlife viewing<br>
+                                - Visits to local Samburu villages<br>
+                                - Learn about Samburu traditions and customs<br>
+                                - Riverside walks and birdwatching<br>
+                                - Stay in eco-friendly accommodations
+                            ',
+                        ],
+                        [
+                            'title' => 'Luxury Samburu Adventure (4 Days)',
+                            'desc' => 'Indulge in a luxurious safari experience in Samburu.',
+                            'image' => 'samburu_lux.webp',
+                            'price' => 280000,
+                            'details' => '
+                                - Stay in high-end safari lodges/camps<br>
+                                - Private game drives with experienced guides<br>
+                                - Gourmet meals and exceptional service<br>
+                                - Sundowner experiences with stunning views<br>
+                                - Optional hot air balloon safari
+                            ',
+                        ],
+                        [
+                            'title' => 'Samburu Birding Safari (4 Days)',
+                            'desc' => 'Discover the diverse avian life of Samburu.',
+                            'image' => 'samburu_bird.webp',
+                            'price' => 180000,
+                            'details' => '
+                                - Guided birdwatching tours with expert ornithologists<br>
+                                - Explore different habitats within the reserve<br>
+                                - Learn to identify Samburu\'s unique bird species<br>
+                                - Comfortable accommodation near birding hotspots<br>
+                                - Includes bird identification guides
+                            ',
+                        ],
+                        [
+                            'title' => 'Family Safari in Samburu (5 Days)',
+                            'desc' => 'A fun and educational safari for the whole family.',
+                            'image' => 'family_safari.jpg',
+                            'price' => 200000,
+                            'details' => '
+                                - Kid-friendly game drives and activities<br>
+                                - Educational nature walks and talks<br>
+                                - Family-oriented accommodation<br>
+                                - Opportunities to learn about Samburu culture<br>
+                                - Includes child-friendly meals
+                            ',
+                        ],
+                        [
+                            'title' => 'Samburu Photography Safari (6 Days)',
+                            'desc' => 'Capture the stunning beauty of Samburu through your lens.',
+                            'image' => 'samburu_photo.webp',
+                            'price' => 250000,
+                            'details' => '
+                                - Guided by a professional wildlife photographer<br>
+                                - Focus on capturing the best light and moments<br>
+                                - Flexible schedules to maximize photographic opportunities<br>
+                                - Workshops on wildlife photography techniques<br>
+                                - Accommodation in strategically located camps
+                            ',
+                        ],
                     ] as $package)
 
                     <div class="package-card" data-bs-toggle="modal" data-bs-target="#bookingModal"
@@ -202,7 +168,6 @@
             </div>
         </div>
 
-        <!-- Booking Modal -->
         <div class="modal fade" id="bookingModal" tabindex="-1" aria-labelledby="bookingModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-lg modal-dialog-centered">
                 <div class="modal-content">
@@ -211,7 +176,6 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <!-- <img id="modalImage" src="" class="img-fluid rounded mb-3 w-50" alt="Package Image"> -->
                         <h4 id="modalTitle" class="mb-3"></h4>
                         <p><strong>Price:</strong> Kshs. <span id="modalPrice"></span></p>
                         <div id="modalDetails"></div>
@@ -222,63 +186,45 @@
         </div>
     </section>
 
-    <!-- Top Destinations Section -->
     <section class="top-destinations">
         <div class="container">
-            <h2 class="locations-title text-center">Top Destinations</h2>
+            <h2 class="locations-title text-center">Explore Samburu's Gems</h2>
             <div class="row">
-                <!-- Left Side: Location Grid -->
                 <div class="col-md-6 position-relative">
-                    <!-- Left Arrow -->
                     <button class="scroll-btn left" onclick="scrollGrid(-1)">&#10094;</button>
 
                     <div class="locations-grid-wrapper overflow-hidden">
                         <div class="locations-grid d-flex flex-nowrap" id="locationsGrid">
                             @php
                             $destinations = [
-                            [
-                            'title' => 'Sweet Waters Camp',
-                            'desc' => 'Sweetwaters Camp location within the Ol Pejeta Conservancy
-                            enables you to take part in everything from game drives and lion tracking to scenic bird
-                            walks along the
-                            river. These spacious tents combine the traditional ambiance of a safari camp with the
-                            comforts of home.
-                            ',
-                            'image' => 'sweet_waters.webp',
-                            'price' => 500,
-                            'currency' => 'USD',
-                            ],
-
-                            [
-                            'title' => 'The River Camp',
-                            'desc' => 'The River Camp is a luxurious safari retreat located within
-                            Kenya\'s Ol Pejeta Conservancy, nestled along the serene Ngobit River. The camp offers six
-                            double ensuite
-                            guest tents and two family suites, accommodating up to 20 guests, ensuring an intimate and
-                            exclusive
-                            experience. Each tent features private decks with views of the river, as well as indoor and
-                            outdoor
-                            showers. ',
-                            'image' => 'river_camp.webp',
-                            'price' => 400,
-                            'currency' => 'USD',
-                            ],
-
-                            [
-                            'title' => 'Ol Pejeta Bush Camp',
-                            'desc' => 'With only 8 tents, that are spacious and comfortable canvas
-                            tents along the Ewaso Ngiro River, where elephants are frequently seen from camp, you can
-                            relax and take
-                            in the iconic landscapes and stunning backdrop views of Mount Kenya while observing the
-                            rarest African
-                            wildlife. Additionally, you can enjoy superb general game viewing and get involved in
-                            activities such as
-                            canine training or recording lion sightings for the research team.',
-                            'image' => 'bush_camp.webp',
-                            'price' => 500,
-                            'currency' => 'USD',
-                            ],
-
+                                [
+                                    'title' => 'Ewaso Nyiro River',
+                                    'desc' => 'The lifeblood of Samburu, attracting diverse wildlife for drinking and bathing.',
+                                    'image' => 'ewaso_nyiro.webp',
+                                    'price' => 0,
+                                    'currency' => 'KES',
+                                ],
+                                [
+                                    'title' => 'Samburu National Reserve',
+                                    'desc' => 'The core of wildlife viewing, home to the Special Five and stunning landscapes.',
+                                    'image' => 'samburu_1.webp',
+                                    'price' => 60,
+                                    'currency' => 'USD',
+                                ],
+                                [
+                                    'title' => 'Buffalo Springs NR',
+                                    'desc' => 'Known for its oasis-like springs and unique wildlife, adjacent to Samburu.',
+                                    'image' => 'buffalo_springs.webp',
+                                    'price' => 60,
+                                    'currency' => 'USD',
+                                ],
+                                [
+                                    'title' => 'Samburu Cultural Villages',
+                                    'desc' => 'An opportunity to immerse yourself in the vibrant culture and traditions of the Samburu people.',
+                                    'image' => 'samburu_culture.webp',
+                                    'price' => 30,
+                                    'currency' => 'USD',
+                                ],
                             ];
                             $chunks = array_chunk($destinations, 4); // 2x2 layout = 4 cards per scroll "page"
                             @endphp
@@ -287,12 +233,12 @@
                             <div class="grid-page d-flex flex-wrap me-4" style="width: 520px;">
                                 @foreach ($chunk as $destination)
                                 <div class="location-card m-2 flex-shrink-0" onclick="showDetails(
-                                        '{{ $destination['title'] }}',
-                                        `{{ addslashes($destination['desc']) }}`,
-                                        '{{ asset('images/' . $destination['image']) }}',
-                                        '{{ number_format($destination['price']) }}',
-                                        '{{ $destination['currency'] }}'
-                                    )" style="width: 240px; height: 260px; cursor: pointer;">
+                                            '{{ $destination['title'] }}',
+                                            `{{ addslashes($destination['desc']) }}`,
+                                            '{{ asset('images/' . $destination['image']) }}',
+                                            '{{ number_format($destination['price']) }}',
+                                            '{{ $destination['currency'] }}'
+                                        )" style="width: 240px; height: 260px; cursor: pointer;">
                                     <img src="{{ asset('images/' . $destination['image']) }}"
                                         alt="{{ $destination['title'] }}" class="img-fluid rounded mb-2"
                                         style="height: 150px; object-fit: cover;">
@@ -304,7 +250,6 @@
                         </div>
                     </div>
 
-                    <!-- Right Arrow -->
                     <button class="scroll-btn right" onclick="scrollGrid(1)">&#10095;</button>
                 </div>
 
@@ -318,24 +263,10 @@
                         <h3 id="location-title">{{ $destinations[0]['title'] ?? 'Select a Location' }}</h3>
                         <p id="location-desc" class="px-4">{{ $destinations[0]['desc'] ?? 'Details will appear here.' }}
                         </p>
-                        @php
-                        $currencySymbols = [
-                        'KES' => 'Kshs',
-                        'USD' => '$',
-                        'EUR' => '€',
-                        'GBP' => '£',
-                        ];
-
-                        $currency = $destinations[0]['currency'] ?? 'KES'; // Default to KES
-                        $symbol = $currencySymbols[$currency] ?? $currency; // Fallback to code if symbol not found
-                        @endphp
-
                         <p id="location-price" class="fw-bold mt-2">
-                            Price ranging from <strong>{{ $symbol }} {{ number_format($destinations[0]['price'] ?? 0)
-                                }}</strong> per
+                            Price ranging from <strong>${{ number_format($destinations[0]['price'] ?? 0) }}</strong> per
                             person depending on month of travel
                         </p>
-
                         <a id="bookNowBtn" href="{{ route('booking.destination.form', [
                                     'location' => $destination['title'],
                                     'title' => $destination['title'],
@@ -351,11 +282,6 @@
             </div>
         </div>
     </section>
-
-
-
-
-
 
     <!-- Booking Guidance Section -->
     <section class="booking-guidance">
@@ -467,10 +393,14 @@
                 EUR: '€',
                 GBP: '£'
             };
+            // Assume `price` is a number and `currency` is a string like 'KES'
             const formattedPrice = new Intl.NumberFormat().format(price);
-            const symbol = currencySymbols[currency] || currency;
+            const symbol = currencySymbols[currency] || currency; 
+
             document.getElementById('location-price').innerHTML =
                 `Price ranging from <strong>${symbol} ${formattedPrice}</strong> per person depending on month of travel`;
+            // You might have a specific element to display currency if needed
+            // document.getElementById('currency-display-element').innerText = currency;
 
             // Update the href of the "Book Now" button
             const bookNowBtn = document.getElementById('bookNowBtn');

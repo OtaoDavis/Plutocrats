@@ -15,6 +15,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
 
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
@@ -66,35 +67,138 @@
 
                 <div class="packages-scroll">
                     @foreach ([
-                    ['title' => '7-Day Luxury Safari', 'desc' => 'A full week of adventure with luxury stays.', 'image'
-                    => 'kicheche.webp', 'price' => 250000],
-                    ['title' => '5-Day Game Drive', 'desc' => 'Enjoy thrilling game drives across the Mara.', 'image' =>
-                    'game_drive.webp', 'price' => 180000],
-                    ['title' => '3-Day Budget Safari', 'desc' => 'Affordable and exciting short safari experience.',
-                    'image' => 'budget.png', 'price' => 90000],
-                    ['title' => 'Hot Air Balloon Safari', 'desc' => 'Experience the Mara from above at sunrise.',
-                    'image' => 'balloon.jpg', 'price' => 150000],
-                    ['title' => 'Exclusive Charter Safari', 'desc' => 'Private charter flights for a VIP safari.',
-                    'image' => 'charter2.webp', 'price' => 500000],
-                    ['title' => 'Big Five Expedition', 'desc' => 'Track the legendary Big Five in their natural
-                    habitat.', 'image' => 'big-five.webp', 'price' => 200000],
-                    ['title' => 'Family Safari', 'desc' => 'Tailored packages for a fun family adventure.', 'image' =>
-                    'hiking.webp', 'price' => 160000],
-                    ['title' => 'Photography Tour', 'desc' => 'Perfect for wildlife photographers and nature lovers.',
-                    'image' => 'photography.jpg', 'price' => 175000],
-                    ['title' => 'Honeymoon Safari', 'desc' => 'Romantic getaway amidst the beauty of the Mara.', 'image'
-                    => 'romance.jpg', 'price' => 220000],
+                    [
+                    'location' => 'Amboseli',
+                    'title' => '4-Day Kilimanjaro View Safari',
+                    'desc' => 'Unmatched views of Mt. Kilimanjaro with game drives in elephant territory.',
+                    'image' => 'kicheche.webp',
+                    'price' => 88000,
+                    'currency' => 'KES',
+                    'details' => '
+                    <p><strong>Overview:</strong> Explore Amboseli’s breathtaking landscapes and wildlife, with a
+                        spectacular view of Mount Kilimanjaro. This safari includes full-day game drives and visits to
+                        the Amboseli National Park.</p>
+                    <p><strong>Includes:</strong> Accommodation, meals, park entry, two daily game drives, and Mount
+                        Kilimanjaro photo opportunities.</p>',
+                    ],
+                    [
+                    'location' => 'Amboseli',
+                    'title' => '3-Day Amboseli Plains Drive',
+                    'desc' => 'Explore the wild side of Amboseli with thrilling game drives.',
+                    'image' => 'game_drive.webp',
+                    'price' => 65000,
+                    'currency' => 'KES',
+                    'details' => '
+                    <p><strong>Highlights:</strong> A 3-day safari exploring Amboseli’s vast plains and wetlands, home
+                        to elephant herds and diverse bird species. Includes 4x4 game drives and cultural visits.</p>
+                    <p><strong>Includes:</strong> Accommodation, meals, park entry, two game drives per day, and a
+                        cultural experience.</p>',
+                    ],
+                    [
+                    'location' => 'Amboseli',
+                    'title' => '2-Night Budget Amboseli Trip',
+                    'desc' => 'Affordable and exciting short getaway with daily game drives.',
+                    'image' => 'budget.png',
+                    'price' => 40000,
+                    'currency' => 'KES',
+                    'details' => '
+                    <p><strong>Highlights:</strong> Affordable yet thrilling safari for budget-conscious travelers.
+                        Includes basic tented camps and game drives with the chance to spot lions, elephants, and other
+                        wildlife.</p>
+                    <p><strong>Includes:</strong> Accommodation, meals, park entry, and two daily game drives.</p>',
+                    ],
+                    [
+                    'location' => 'Amboseli',
+                    'title' => 'Hot Air Balloon Safari',
+                    'desc' => 'Experience Amboseli from above during sunrise with a balloon ride.',
+                    'image' => 'balloon.jpg',
+                    'price' => 120000,
+                    'currency' => 'KES',
+                    'details' => '
+                    <p><strong>Experience:</strong> 1-hour flight at dawn followed by a champagne breakfast in the bush.
+                        Enjoy spectacular aerial views of the elephants and the majestic Mount Kilimanjaro.</p>
+                    <p><strong>Includes:</strong> Balloon flight, breakfast, transport to the launch site, and a game
+                        drive afterward.</p>',
+                    ],
+                    [
+                    'location' => 'Amboseli',
+                    'title' => 'Private Fly-in Safari Package',
+                    'desc' => 'Charter flight to Amboseli with all-inclusive luxury safari.',
+                    'image' => 'charter2.webp',
+                    'price' => 310000,
+                    'currency' => 'KES',
+                    'details' => '
+                    <p><strong>For VIPs:</strong> Includes charter flights to Amboseli, luxury accommodation,
+                        personalized game drives, a private chef, and exclusive experiences tailored to your
+                        preferences.</p>
+                    <p><strong>Includes:</strong> Private flights, all meals, accommodation, and a private guide for
+                        your safari.</p>',
+                    ],
+                    [
+                    'location' => 'Amboseli',
+                    'title' => 'Elephant Corridor Expedition',
+                    'desc' => 'Track massive elephant herds across Amboseli’s iconic corridors.',
+                    'image' => 'big-five.webp',
+                    'price' => 97000,
+                    'currency' => 'KES',
+                    'details' => '
+                    <p><strong>Itinerary:</strong> A 4-day expedition focused on the famous elephant herds of Amboseli.
+                        Includes game drives, nature walks, and educational talks about elephant conservation.</p>
+                    <p><strong>Includes:</strong> Accommodation, meals, park entry, and daily game drives focused on
+                        elephant sightings.</p>',
+                    ],
+                    [
+                    'location' => 'Amboseli',
+                    'title' => 'Family Safari',
+                    'desc' => 'A family-friendly adventure with safe, fun activities.',
+                    'image' => 'hiking.webp',
+                    'price' => 86000,
+                    'currency' => 'KES',
+                    'details' => '
+                    <p><strong>Perfect for all ages:</strong> Family-friendly accommodations and activities such as
+                        nature walks, storytelling by the campfire, and fun games for kids.</p>
+                    <p><strong>Includes:</strong> Accommodation, meals, two daily game drives, and family-focused
+                        activities.</p>',
+                    ],
+                    [
+                    'location' => 'Amboseli',
+                    'title' => 'Photography Safari',
+                    'desc' => 'Capture the beauty of Amboseli with a professional photographer guiding you.',
+                    'image' => 'photography.jpg',
+                    'price' => 99000,
+                    'currency' => 'KES',
+                    'details' => '
+                    <p><strong>For photography lovers:</strong> Enjoy dawn and dusk game drives in prime photo
+                        locations. Professional photographer available to assist with tips and techniques.</p>
+                    <p><strong>Includes:</strong> Accommodation, meals, park entry, and two daily game drives with
+                        photography assistance.</p>',
+                    ],
+                    [
+                    'location' => 'Amboseli',
+                    'title' => 'Romantic Amboseli Escape',
+                    'desc' => 'A luxury couples’ retreat with breathtaking views and personalized services.',
+                    'image' => 'romance.jpg',
+                    'price' => 125000,
+                    'currency' => 'KES',
+                    'details' => '
+                    <p><strong>Romantic Touches:</strong> Exclusive experiences such as private bush dinners, sunset
+                        game drives, and couples’ spa treatments. Perfect for honeymooners or a special getaway.</p>
+                    <p><strong>Includes:</strong> All meals, luxury accommodation, private game drives, and spa
+                        treatments.</p>',
+                    ],
                     ] as $package)
                     <div class="package-card" data-bs-toggle="modal" data-bs-target="#bookingModal"
                         data-title="{{ $package['title'] }}" data-desc="{{ $package['desc'] }}"
                         data-image-name="{{ $package['image'] }}" data-price="{{ $package['price'] }}"
+                        data-details="{!! $package['details'] !!}"
                         style="background-image: url('{{ asset('images/' . $package['image']) }}');">
                         <div class="overlay">
                             <h3>{{ $package['title'] }}</h3>
                             <p>{{ $package['desc'] }}</p>
                             <span class="book-text" data-bs-toggle="modal" data-bs-target="#bookingModal"
                                 data-title="{{ $package['title'] }}" data-desc="{{ $package['desc'] }}"
-                                data-image-name="{{ $package['image'] }}" data-price="{{ $package['price'] }}">
+                                data-image-name="{{ $package['image'] }}" data-price="{{ $package['price'] }}"
+                                data-details="{!! $package['details'] !!}">
                                 View Details
                             </span>
                         </div>
@@ -116,17 +220,12 @@
                         <h5 class="modal-title" id="bookingModalLabel">Package Details</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                    <div class="modal-body row">
-                        <div class="col-md-6">
-                            <img id="modalImage" src="" class="img-fluid rounded mb-3" alt="Package Image">
-                        </div>
-                        <div class="col-md-6">
-                            <h4 id="modalTitle"></h4>
-                            <p id="modalDesc"></p>
-                            <p><strong>Price:</strong> Kshs. <span id="modalPrice"></span></p>
-                            <a id="modalBookBtn" href="#" class="btn btn-primary mt-3 w-100">Proceed to
-                                Booking</a>
-                        </div>
+                    <div class="modal-body">
+                        <!-- <img id="modalImage" src="" class="img-fluid rounded mb-3 w-50" alt="Package Image"> -->
+                        <h4 id="modalTitle" class="mb-3"></h4>
+                        <p><strong>Price:</strong> Kshs. <span id="modalPrice"></span></p>
+                        <div id="modalDetails"></div>
+                        <a id="modalBookBtn" href="#" class="btn btn-primary mt-3 w-100">Proceed to Booking</a>
                     </div>
                 </div>
             </div>
@@ -302,7 +401,7 @@
                                     'price' => $destination['price'],
                                     'desc' => addslashes($destination['desc']),
                                     'currency' => $destination['currency']
-                                ]) }}" class="btn btn-primary mt-3">
+                                ]) }}" class="btn btn-primary custom-book-button mt-3">
                             Book Now
                         </a>
                     </div>
@@ -389,6 +488,28 @@
             });
         });
 
+        const bookingModal = document.getElementById('bookingModal');
+        bookingModal.addEventListener('show.bs.modal', function (event) {
+            const button = event.relatedTarget;
+
+            const title = button.getAttribute('data-title') || '';
+            const imageName = button.getAttribute('data-image-name') || '';
+            const price = button.getAttribute('data-price') || '';
+            const details = button.getAttribute('data-details') || '';
+
+            const imagePath = `/images/${imageName}`;
+
+            bookingModal.querySelector('#modalTitle').textContent = title;
+            // bookingModal.querySelector('#modalImage').src = imagePath;
+            bookingModal.querySelector('#modalPrice').textContent = price;
+            bookingModal.querySelector('#modalDetails').innerHTML = details;
+
+            const encodedTitle = encodeURIComponent(title);
+            const encodedPrice = encodeURIComponent(price);
+            const bookingUrl = `/booking?title=${encodedTitle}&image=${imageName}&price=${encodedPrice}`;
+            bookingModal.querySelector('#modalBookBtn').href = bookingUrl;
+        });
+
         function showDetails(title, desc, image, price, currency) {
             console.log("showDetails called with image:", image, "and currency:", currency);
             const locationImage = document.getElementById('location-image');
@@ -398,7 +519,18 @@
             console.log("Image src set to:", locationImage.src);
             document.getElementById('location-title').textContent = title;
             document.getElementById('location-desc').textContent = desc;
-            document.getElementById('location-price').innerHTML = `Price ranging from <strong>$ ${price}</strong> per person depending on month of travel`;
+            const currencySymbols = {
+                KES: 'Kshs',
+                USD: '$',
+                EUR: '€',
+                GBP: '£'
+            };
+            // Assume `price` is a number and `currency` is a string like 'KES'
+            const formattedPrice = new Intl.NumberFormat().format(price);
+            const symbol = currencySymbols[currency] || currency; 
+
+            document.getElementById('location-price').innerHTML =
+                `Price ranging from <strong>${symbol} ${formattedPrice}</strong> per person depending on month of travel`;
             // You might have a specific element to display currency if needed
             // document.getElementById('currency-display-element').innerText = currency;
 

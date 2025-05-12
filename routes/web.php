@@ -57,6 +57,10 @@ Route::get('/locations/mara', function () {
     return view('locations.mara');
 })->name('mara');
 
+Route::get('/locations/samburu', function () {
+    return view('locations.samburu');
+})->name('samburu');
+
 Route::get('/locations/tsavo', function () {
     return view('locations.tsavo');
 })->name('tsavo');
@@ -86,9 +90,7 @@ Route::post('/initiate-payment', [PaymentController::class, 'initiatePayment'])
 
 //reinitiate payment
 Route::post('/payment/reinitiate/{booking_id}', [PaymentController::class, 'reinitiatePayment'])->name('payment.reinitiate');
-// Route IntaSend will POST callback notifications to (NO CSRF protection)
 Route::post('/callback/{booking_id}', [PaymentController::class, 'callback'])->name('payment.callback');
 Route::get('/payment/success/{booking_id}', [PaymentController::class, 'success'])->name('payment.success');
 Route::get('/payment/redirect/{booking_id}', [PaymentController::class, 'paymentRedirect'])->name('payment.redirect')->middleware('auth');
-
-    
+Route::post('/payment/webhook', [PaymentController::class, 'handleWebhook'])->name('payment.webhook');
