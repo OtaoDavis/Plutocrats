@@ -273,7 +273,8 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
             padding: 5px 20px;
             display: block; }
             .site-nav .site-navigation .site-menu .has-children .dropdown > li > a:hover {
-              color: #1A374D; }
+              color: #b48f20;
+              text-decoration: none; }
           .site-nav .site-navigation .site-menu .has-children .dropdown > li.has-children > a:before {
             content: "\e315";
             right: 20px; }
@@ -557,11 +558,11 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
   outline: none; }  
 
 .about-text{
-  color: #1A374D;
+  color: #fff;
 }
 
 .hero {
-  padding: 7rem 0 10rem 0;
+  padding: 1rem 0 10rem 0;
   background: #b48f20;
   margin-bottom: 100px; }
   .hero.hero-inner {
@@ -1449,17 +1450,6 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
 /* Hover Effect */
 .explore-text:hover::after {
   background: #b48f20;
-}
-
-.btn-book-today {
-  background-color: #ffffff;
-  color: #1A374D;
-  border: 2px solid #1A374D;
-  padding: 8px 20px;
-  border-radius: 10px;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  text-decoration: none;
 }
 
 .btn-book-today:hover {

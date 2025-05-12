@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Booking;
 use Illuminate\Support\Facades\Auth;
 use Carbon\Carbon;
+use Illuminate\Validation\Rule; 
 
 class BookingController extends Controller
 {
@@ -14,31 +15,42 @@ class BookingController extends Controller
     }
 
     // Store a new booking
-    public function store(Request $request){
-        $request->validate([
-            'check_in_date' => 'required|date',
-            'check_out_date' => 'required|date|after:check_in_date',
-            'adults' => 'required|integer|min:1',
-            'children' => 'nullable|integer|min:0',
-            'location' => 'required|string|max:255',
-            'price' => 'required|integer|min:1',
-            'title' => 'required|string|max:255',
-        ]);
+    public function store(Request $request)
+{
+    // Apply validation rules for the booking form
+    $validated = $request->validate([
+        'title' => 'required|string|max:255',
+        'check_in_date' => 'required|date|after_or_equal:today',
+        'check_out_date' => 'required|date|after:check_in_date',
+        'adults' => 'required|integer|min:1',
+        'children' => 'nullable|integer|min:0', 
+        'price' => 'required|numeric|min:1', 
+        'currency' => ['required', 'string', Rule::in(['KES', 'USD', 'EUR'])], 
+        'image' => 'nullable|string|max:255',
+    ]);
 
-        Booking::create([
-            'user_id' => auth()->id(),
-            'check_in_date' => $request->check_in_date,
-            'check_out_date' => $request->check_out_date,
-            'adults' => $request->adults,
-            'children' => $request->children ?? 0,
+    // 1. Create the booking with 'pending' status
+    try {
+        $booking = Booking::create([
+            'user_id' => Auth::id(),
+            'title' => $validated['title'],
+            'image' => $request->image ?? null,
+            'location' => 'Kenya', 
+            'price' => $validated['price'], 
+            'currency' => $validated['currency'],
+            'check_in_date' => $validated['check_in_date'],
+            'check_out_date' => $validated['check_out_date'],
+            'adults' => $validated['adults'],
+            'children' => $validated['children'] ?? 0, 
             'status' => 'pending',
-            'location' => $request->location,
-            'price' => $request->price,
-            'title' => $request->title,
         ]);
 
         return redirect()->route('user_dash')->with('success', 'Booking created successfully.');
+    } catch (\Exception $e) {
+        // Handle exception if the booking creation fails
+        return back()->withErrors(['error' => 'There was an issue creating your booking. Please try again.']);
     }
+}
 
     public function index(){
         // Fetch bookings for the authenticated user
@@ -162,5 +174,65 @@ public function destroy($id)
         return redirect()->back()->with('error', 'Failed to delete booking.');
     }
 }
+
+public function showPackageBookingForm(Request $request)
+    {
+        // Validate incoming query parameters (optional but recommended)
+        $validatedData = $request->validate([
+            'title' => 'sometimes|required|string',
+            'image' => 'sometimes|required|string',
+            'price' => 'sometimes|required|numeric|min:0',
+            'currency' => 'sometimes|required|string|size:3',
+            'desc' => 'nullable|string',
+            'details' => 'nullable|string', 
+        ]);
+
+        // Use validated data or default values if validation passes/is skipped
+        $title = $validatedData['title'] ?? $request->query('title', 'Default Title');
+        $image = $validatedData['image'] ?? $request->query('image', 'mara.webp');
+        $price = $validatedData['price'] ?? $request->query('price', 0);
+        $currency = $validatedData['currency'] ?? $request->query('currency', 'KES'); 
+        $desc = $validatedData['desc'] ?? $request->query('desc', '');
+        $details = $validatedData['details'] ?? $request->query('details', '');
+
+
+        return view('booking', [
+            'title' => urldecode($title),
+            'image' => urldecode($image), 
+            'price' => $price,
+            'currency' => strtoupper(urldecode($currency)), 
+            'desc' => urldecode($desc),
+            'details' => urldecode($details)
+        ]);
+    }
+
+
+    public function showBookings()
+    {
+        $bookings = Booking::with('user')->latest()->paginate(10);
+
+        return view('admin_dash', compact('bookings'));
+    }
+
+    public function showBookingsOnDashboard()
+    {
+        $bookings = Booking::with('user')->latest()->paginate(10);
+        return view('admin_dash', compact('bookings'));
+    }
+
+    public function destinationBookingForm(Request $request)
+    {
+        // Retrieve details from query string
+        $location = $request->input('location', 'Amboseli');
+        $title = $request->input('title');
+        $image = $request->input('image');
+        $price = $request->input('price');
+        $desc = $request->input('desc');
+        $currency = $request->input('currency');     
+
+        return view('booking', compact('location', 'title', 'image', 'price', 'desc', 'currency'));
+    }
+    
+
 
 }

@@ -19,6 +19,13 @@ class Booking extends Model
         'location',
         'price',
         'title',
+        'currency',
+        'image',
+    ];
+
+    protected $casts = [
+        'check_in_date' => 'date', 
+        'check_out_date' => 'date', 
     ];
 
     // Relationship with User

@@ -6,16 +6,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="author" content="BDC Tech">
         <link rel="icon" href="{{ asset('images/ico_head.svg') }}" type="image/svg+xml">
-
         <meta name="description" content="" />
         <meta name="keywords" content="bootstrap, bootstrap4" />
-
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link
             href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Source+Serif+Pro:wght@400;700&display=swap"
             rel="stylesheet">
-
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/owl.carousel.min.css">
         <link rel="stylesheet" href="css/owl.theme.default.min.css">
@@ -25,13 +22,17 @@
         <link rel="stylesheet" href="css/daterangepicker.css">
         <link rel="stylesheet" href="css/aos.css">
         <link rel="stylesheet" href="css/style.css">
-
-        <title>Tour</title>
+        <title>About</title>
+        <style>
+            .hero2 {
+                background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('{{ asset('images/about.jpeg') }}') no-repeat center -20em;
+                background-size: cover;
+                padding: 7rem 0 10rem 0;
+            }
+        </style>
     </head>
 
     <body>
-
-
         <div class="site-mobile-menu site-navbar-target">
             <div class="site-mobile-menu-header">
                 <div class="site-mobile-menu-close">
@@ -42,14 +43,12 @@
         </div>
         @include('layouts.nav')
 
-
-        <div class="hero2"
-            style="background: url('{{ asset('images/about.jpeg') }}') no-repeat center center; background-size: cover; padding: 7rem 0 10rem 0; background-position: center -20em;">
+        <div class="hero2">
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-lg-6 mx-auto text-center">
                         <div class="intro-wrap">
-                            <h1 class="mb-0">About Us</h1>
+                            <h1 class="mb-0" style="color: #fff;">About Us</h1>
                             <p class="about-text">We are a passionate team dedicated to delivering the best tours and
                                 travel experiences. Whether you're looking to explore majestic safaris, hidden gems, or
                                 breathtaking destinations, we are here to make your journey unforgettable. With years of
@@ -60,7 +59,6 @@
             </div>
         </div>
 
-
         <div class="untree_co-section">
             <div class="container">
                 <div class="row">
@@ -70,7 +68,6 @@
                             <img src="images/elephants.webp" alt="Explore the World" class="img-fluid rounded-20">
                             <img src="images/about.jpeg" alt="Amazing Destinations" class="img-fluid rounded-20">
                             <img src="images/amboseli.webp" alt="Unforgettable Safaris" class="img-fluid rounded-20">
-                            <!-- <img src="images/slider-5.jpg" alt="Luxury Escapes" class="img-fluid rounded-20"> -->
                         </div>
                     </div>
                     <div class="col-lg-5 pl-lg-5 ml-auto">
@@ -147,23 +144,7 @@
             </div>
         </div>
 
-
-        <!-- <div class="py-5 cta-section">
-        <div class="container">
-            <div class="row text-center">
-                <div class="col-md-12">
-                    <h2 class="mb-2 text-white">Lets you Explore the Best. Contact Us Now</h2>
-                    <p class="mb-4 lead text-white text-white-opacity">Lorem ipsum dolor sit amet, consectetur
-                        adipisicing elit.
-                        Excepturi, fugit?</p>
-                    <p class="mb-0"><a href="booking.html"
-                            class="btn btn-outline-white text-white btn-md font-weight-bold">Get in
-                            touch</a></p>
-                </div>
-            </div>
-        </div>
-    </div> -->
-
+        @include('layouts.whatsapp')
         @include('layouts.footer')
 
         <div id="overlayer"></div>
@@ -183,9 +164,7 @@
         <script src="js/aos.js"></script>
         <script src="js/moment.min.js"></script>
         <script src="js/daterangepicker.js"></script>
-
         <script src="js/typed.js"></script>
-
         <script src="js/custom.js"></script>
 
     </body>
